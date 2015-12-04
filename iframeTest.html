@@ -60,10 +60,10 @@
           return;
 
         // Update the div element to display the message.
-       console.log("Zipbug messageRecieved: " + evntMessage);
+       console.log("Zipbug messageRecieved: " + e);
     
         var iframeWin = document.getElementById("srcFrame");
-        iframeWin.height(evntMessage);
+        iframeWin.height(e);
       }
 
       // Setup an event listener that calls receiveMessage() when the window
