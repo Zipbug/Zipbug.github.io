@@ -47,29 +47,24 @@
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <script>
-    
-    window.onload = function() {
-      var messageEle = document.getElementById('srcFrame');
-      window.addEventListener('message', receiveMessage);
-    }
-    function receiveMessage(e) {
-      
-        if (e.origin !== "https://cw2.allencomm.com/")
-          return;
+    window.onload = function () {
+      window.addEventListener('message', messageReceived, false);
+    };
 
-      
-       console.log("Zipbug messageRecieved: " + e.data);
-    
-//        var iframeWin = document.getElementById("srcFrame");
-//        iframeWin.height(e);
+    function messageReceived(evntMessage) {
+      console.log('messageReceived()');
+      console.log(' -- evntMessage.origin == ' + evntMessage.origin);
+
+      if (evntMessage.origin === 'http://cw2.allencomm.com') {
+        console.log('valid message!');
       }
-
+    }
   </script>
 </head>
 
 <body>
   <div class="container">
-    <iframe  id="srcFrame" src="https://cw2.allencomm.com/quiet/iframe/f1f65e20-8ae3-472c-8a10-81cf28522132/index.html?page=52b2a779-a041-49c8-b851-9a1a62451e8a" frameborder="0"></iframe>
+    <iframe id="srcFrame" src="https://cw2.allencomm.com/quiet/iframe/f1f65e20-8ae3-472c-8a10-81cf28522132/index.html?page=52b2a779-a041-49c8-b851-9a1a62451e8a" frameborder="0"></iframe>
   </div>
 </body>
 
