@@ -55,7 +55,7 @@
     }
 
     function messageRecieved(evntMessage) {
-       console.log(evntMessage);
+      console.log("Zipbug messageRecieved: " + evntMessage);
       if (event.origin === "https://cw2.allencomm.com/") {
        
         var iframeWin = document.getElementById("srcFrame");
