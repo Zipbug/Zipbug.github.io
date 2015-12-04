@@ -49,27 +49,20 @@
   <script>
     
     window.onload = function() {
-      // Get a reference to the div on the page that will display the
-      // message text.
       var messageEle = document.getElementById('srcFrame');
-
-      // A function to process messages received by the window.
-      function receiveMessage(e) {
-        // Check to make sure that this message came from the correct domain.
+      window.addEventListener('message', receiveMessage);
+    }
+    function receiveMessage(e) {
+      
         if (e.origin !== "https://cw2.allencomm.com/")
           return;
 
-        // Update the div element to display the message.
-       console.log("Zipbug messageRecieved: " + e);
+      
+       console.log("Zipbug messageRecieved: " + e.data);
     
-        var iframeWin = document.getElementById("srcFrame");
-        iframeWin.height(e);
+//        var iframeWin = document.getElementById("srcFrame");
+//        iframeWin.height(e);
       }
-
-      // Setup an event listener that calls receiveMessage() when the window
-      // receives a new MessageEvent.
-      window.addEventListener('message', receiveMessage);
-    }
 
   </script>
 </head>
