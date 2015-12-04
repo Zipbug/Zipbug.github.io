@@ -48,7 +48,7 @@
   <meta name="theme-color" content="#ffffff">
   <script>
     function initialize() {
-       var iframeWin = document.getElementById("srcFrame");
+       var iframeWin = document.getElementById("srcFrame").contentWindow;
       iframeWin.addEventListener('message', messageRecieved, false);
        window.addEventListener('message', messageRecieved, false);
 
