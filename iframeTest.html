@@ -50,6 +50,7 @@
     function initialize() {
        var iframeWin = document.getElementById("srcFrame");
       iframeWin.addEventListener('message', messageRecieved, false);
+       window.addEventListener('message', messageRecieved, false);
 
     }
 
