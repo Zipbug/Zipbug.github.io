@@ -47,25 +47,34 @@
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <script>
-    function initialize() {
-       var iframeWin = document.getElementById("srcFrame").contentWindow;
-      iframeWin.addEventListener('message', messageRecieved, false);
-       window.addEventListener('message', messageRecieved, false);
+    
+    window.onload = function() {
+      // Get a reference to the div on the page that will display the
+      // message text.
+      var messageEle = document.getElementById('srcFrame');
 
-    }
+      // A function to process messages received by the window.
+      function receiveMessage(e) {
+        // Check to make sure that this message came from the correct domain.
+        if (e.origin !== "https://cw2.allencomm.com/")
+          return;
 
-    function messageRecieved(evntMessage) {
-      console.log("Zipbug messageRecieved: " + evntMessage);
-      if (event.origin === "https://cw2.allencomm.com/") {
-       
+        // Update the div element to display the message.
+       console.log("Zipbug messageRecieved: " + evntMessage);
+    
         var iframeWin = document.getElementById("srcFrame");
         iframeWin.height(evntMessage);
       }
+
+      // Setup an event listener that calls receiveMessage() when the window
+      // receives a new MessageEvent.
+      window.addEventListener('message', receiveMessage);
     }
+
   </script>
 </head>
 
-<body onload="initialize();">
+<body>
   <div class="container">
     <iframe  id="srcFrame" src="https://cw2.allencomm.com/quiet/iframe/f1f65e20-8ae3-472c-8a10-81cf28522132/index.html?page=52b2a779-a041-49c8-b851-9a1a62451e8a" frameborder="0"></iframe>
   </div>
