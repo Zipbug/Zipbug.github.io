@@ -49,16 +49,16 @@
   <script>
     function initialize() {
       window.addEventListener('message', messageRecieved, false);
-      window.opener.postMessage('READY', '*');
-      var d = new Date();
-      var n = d.toDateString();
-      document.getElementById('date').innerHTML = n;
+
     }
 
     function messageRecieved(evntMessage) {
-      console.log(evntMessage);
-      var frame = document.getElementById("srcFrame");
-      frame.height(evntMessage);
+       console.log(evntMessage);
+      if (event.origin === "https://cw2.allencomm.com/") {
+       
+        var iframeWin = document.getElementById("srcFrame");
+        frame.height(evntMessage);
+      }
     }
   </script>
 </head>
