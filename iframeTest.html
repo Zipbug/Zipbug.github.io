@@ -52,11 +52,11 @@
     };
 
     function messageReceived(evntMessage) {
-      console.log('messageReceived()');
-      console.log(' -- evntMessage.origin == ' + evntMessage.origin);
+      
 
-      if (evntMessage.origin === 'http://cw2.allencomm.com') {
+      if (evntMessage.origin === 'https://cw2.allencomm.com') {
         console.log('valid message!');
+        console.log("iframe-height: " + evntMessage.data);
       }
     }
   </script>
