@@ -43,6 +43,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "latoregular";
+  font-size:16px;
 }
 
 html {
@@ -297,7 +298,6 @@ a {
       background-color: #94989A;
     }
     .title {
-      font-size: 5.5em;
       font-family: "latoThin", sans-serif;
       color: #ededed;
       width: 80%;
@@ -307,6 +307,7 @@ a {
       text-align: center;
       display: block;
       h1 {
+        font-size:6em;
         text-transform: capitalize;
         margin: 0;
       }
