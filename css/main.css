@@ -4,32 +4,27 @@
   src: url("../fonts/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bold-webfont.woff2") format("woff2"), url("../fonts/lato-bold-webfont.woff") format("woff"), url("../fonts/lato-bold-webfont.ttf") format("truetype"), url("../fonts/lato-bold-webfont.svg#latobold") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'latoregular';
   src: url("../fonts/lato-regular-webfont.eot");
   src: url("../fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype"), url("../fonts/lato-regular-webfont.svg#latoregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'latosemibold';
   src: url("../fonts/lato-semibold-webfont.eot");
   src: url("../fonts/lato-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-semibold-webfont.woff2") format("woff2"), url("../fonts/lato-semibold-webfont.woff") format("woff"), url("../fonts/lato-semibold-webfont.ttf") format("truetype"), url("../fonts/lato-semibold-webfont.svg#latosemibold") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'latothin';
   src: url("../fonts/lato-thin-webfont.eot");
   src: url("../fonts/lato-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-thin-webfont.woff2") format("woff2"), url("../fonts/lato-thin-webfont.woff") format("woff"), url("../fonts/lato-thin-webfont.ttf") format("truetype"), url("../fonts/lato-thin-webfont.svg#latothin") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /*
   Variables 
 */
-/* line 40, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 html,
 body {
   padding: 0;
@@ -39,28 +34,23 @@ body {
   font-family: "latoregular";
   font-size: 16px; }
 
-/* line 49, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 html {
   overflow-x: hidden; }
 
-/* line 53, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 a {
   color: #40B5E5;
   text-decoration: none; }
 
-/* line 59, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .clearfix:after {
   content: "";
   padding: 1px;
   clear: both;
   display: block; }
 
-/* line 67, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .hidden {
   opacity: 0;
   visibility: hidden; }
 
-/* line 72, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .btn {
   font-size: 22px;
   font-weight: bolder;
@@ -73,7 +63,6 @@ a {
 /*
     Navigation
 */
-/* line 87, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .main-nav {
   position: fixed;
   top: 0;
@@ -81,7 +70,6 @@ a {
   width: 100%;
   font-family: "latoregular";
   z-index: 999; }
-  /* line 94, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .main-nav ul {
     list-style: none;
     background-color: #1B2124;
@@ -91,23 +79,19 @@ a {
     height: 7px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    /* line 103, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav ul li {
       padding: 0; }
-  /* line 107, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .main-nav .nav-item {
     float: left;
     position: relative;
     width: 25%;
     margin-top: -100%; }
-    /* line 112, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .nav-item a {
       text-decoration: none;
       padding: 10px 0;
       text-align: center;
       width: 100%;
       display: block; }
-  /* line 120, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .main-nav .trigger {
     width: 180px;
     height: 50px;
@@ -120,7 +104,6 @@ a {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     z-index: 999; }
-    /* line 132, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger:before {
       content: "";
       width: 0;
@@ -137,7 +120,6 @@ a {
       -webkit-transition-property: width, height;
       /* Safari */
       transition-property: width, height; }
-    /* line 149, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger .menu-text {
       position: absolute;
       left: 50%;
@@ -145,7 +127,6 @@ a {
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       z-index: 999; }
-    /* line 157, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger .nav-arrow {
       position: absolute;
       height: 2px;
@@ -153,47 +134,37 @@ a {
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
       z-index: 999; }
-    /* line 166, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger .left-arm,
     .main-nav .trigger .right-arm {
       top: 0;
       width: 50px; }
-    /* line 170, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger .left-arm {
       left: 0; }
-    /* line 173, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger .right-arm {
       right: 0; }
-    /* line 177, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger .left-body,
     .main-nav .trigger .right-body {
       top: 16.5px;
       width: 55px; }
-    /* line 181, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger .left-body {
       left: 42px;
       -webkit-transform: rotate(40deg);
       -ms-transform: rotate(40deg);
       transform: rotate(40deg); }
-    /* line 187, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav .trigger .right-body {
       right: 42px;
       -webkit-transform: rotate(-40deg);
       -ms-transform: rotate(-40deg);
       transform: rotate(-40deg); }
-  /* line 195, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .main-nav.open ul {
     height: 50px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-  /* line 200, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .main-nav.open .nav-item {
     margin-top: 0; }
-  /* line 203, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .main-nav.open .trigger {
     top: 20px;
     color: transparent; }
-    /* line 206, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger:before {
       top: 6px;
       left: 68px;
@@ -203,139 +174,106 @@ a {
       background-color: #1B2124;
       border-color: #40B5E5;
       border-radius: 50%; }
-    /* line 217, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger .left-arm,
     .main-nav.open .trigger .right-arm {
       top: 20px;
       width: 20px; }
-    /* line 222, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger .left-body,
     .main-nav.open .trigger .right-body {
       top: 33px;
       width: 20px; }
-    /* line 226, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger .left-arm {
       left: 72px; }
-    /* line 229, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger .right-arm {
       right: 72px; }
-    /* line 232, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger .left-arm {
       -webkit-transform: rotate(40deg);
       -ms-transform: rotate(40deg);
       transform: rotate(40deg); }
-    /* line 237, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger .right-arm {
       -webkit-transform: rotate(-40deg);
       -ms-transform: rotate(-40deg);
       transform: rotate(-40deg); }
-    /* line 242, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger .left-body {
       left: 87px; }
-    /* line 245, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main-nav.open .trigger .right-body {
       right: 87px; }
 
-/* line 252, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .main {
   height: 100%;
   width: 100%; }
-  /* line 255, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .main .intro {
     height: 100%;
     width: 100%;
     background-color: #1B2124;
     position: relative; }
-    /* line 260, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main .intro .z_logo {
+      margin: 0 auto;
+      width: 80%;
       max-width: 350px;
-      top: 30%;
-      margin: auto;
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
-      /* line 269, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+      max-height: 350px;
+      padding-top: 70px; }
       .main .intro .z_logo svg {
-        width: 100%; }
-    /* line 273, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+        width: 100%;
+        height: 100%; }
     .main .intro .s0 {
       fill: #94989A; }
-    /* line 276, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main .intro .sc0 {
       -webkit-clip-path: url(#SVGID_2_);
       clip-path: url(#SVGID_2_);
       fill: #94989A; }
-    /* line 281, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main .intro .s1 {
       fill: #40B5E5; }
-    /* line 284, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main .intro .s2 {
       fill: none;
       stroke-width: 2;
       stroke: #94989A; }
-    /* line 289, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main .intro .s3 {
       fill: none;
       stroke-width: 4;
       stroke: #94989A; }
-    /* line 294, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main .intro .line {
       width: 100%;
       height: 2px;
       background-color: #94989A;
       background-color: #94989A; }
-    /* line 300, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .main .intro .title {
       font-family: "latoThin", sans-serif;
       color: #ededed;
       width: 80%;
       max-width: 1200px;
-      padding-top: 25%;
+      margin: auto;
+      padding-top: 0;
       text-align: center;
-      display: block;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%); }
-      /* line 311, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+      display: block; }
       .main .intro .title h1 {
         text-transform: capitalize;
         margin: 0; }
 
 /* Resume */
-/* line 322, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .resume {
   min-height: 100%;
   width: 100%;
   background-color: #DBDBDB;
   padding: 20px 0; }
-  /* line 327, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .container {
     max-width: 1200px; }
-  /* line 330, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .resumeIcon {
     width: 52px;
     height: 50px;
     margin: 20px auto 5px auto; }
-  /* line 335, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .objectiveIcon {
     background: url(../images/icons.png) -55px 0; }
-  /* line 338, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .experienceIcon {
     background: url(../images/icons.png) -158px 0; }
-  /* line 341, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .recreationIcon {
     margin-top: 60px;
     background: url(../images/icons.png) -2px 0; }
-  /* line 345, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .skillsIcon {
     background: url(../images/icons.png) -210px 0; }
-  /* line 348, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .educationIcon {
     margin-top: 180px;
     background: url(../images/icons.png) -106px 0; }
-  /* line 352, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .feelGood {
     float: right;
     position: relative;
@@ -344,7 +282,6 @@ a {
     line-height: 18px;
     color: #2790ba;
     font-family: serif; }
-  /* line 361, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .toGo {
     float: right;
     position: relative;
@@ -353,16 +290,13 @@ a {
     line-height: 18px;
     color: #c3c3c3;
     font-family: serif; }
-  /* line 370, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .recreationImg {
     width: 80%;
     margin-left: 60px;
     margin-top: 20px; }
-  /* line 375, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .avatar {
     width: 120px;
     margin: auto; }
-  /* line 379, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume hr.frontEnd {
     background: #2D90BA;
     color: #181818;
@@ -371,7 +305,6 @@ a {
     padding: 0;
     width: 350px;
     text-align: center; }
-    /* line 387, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .resume hr.frontEnd::after {
       background: #DBDBDB;
       display: inline-block;
@@ -382,56 +315,45 @@ a {
       padding: 0 0.35em;
       position: relative;
       top: -0.35em; }
-  /* line 399, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .headerInfo h2 {
     width: 250px;
     font-size: 52px;
     margin-left: 60px; }
-  /* line 404, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .objective {
     margin: 0 0 80px 0;
     text-align: center; }
-    /* line 407, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .resume .objective h2 {
       font-family: 'latobold';
       font-size: 2em; }
-  /* line 412, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume h3 {
     color: #14212a;
     text-align: center;
     opacity: 0.6;
     margin-bottom: 15px;
     font-size: 1.5em; }
-  /* line 419, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .resume .download {
     text-align: center;
     margin: 10px 0 80px 0; }
-    /* line 422, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .resume .download .btn {
       color: #14212a;
       border-color: #14212a; }
-      /* line 425, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
       .resume .download .btn:hover {
         color: #2b495d;
         border-color: #2b495d; }
 
 /* Gallery */
-/* line 436, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .gallery {
   position: relative;
   padding: 40px 0;
   background-color: #444; }
-  /* line 440, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .gallery h2 {
     color: #dbdbdb;
     text-align: center;
     font-size: 2.2em;
     font-weight: 100; }
-  /* line 446, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .gallery span:nth-of-type(odd) {
     width: 174px;
     margin-right: 2px; }
-  /* line 450, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .gallery .hexagon {
     position: relative;
     float: left;
@@ -440,7 +362,6 @@ a {
     -webkit-transform: rotate(-60deg) skewY(30deg);
     -ms-transform: rotate(-60deg) skewY(30deg);
     transform: rotate(-60deg) skewY(30deg); }
-    /* line 458, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .gallery .hexagon .hexagon-container {
       position: absolute;
       top: 0;
@@ -461,9 +382,7 @@ a {
       border-top: 0 !important;
       border-bottom: 0 !important;
       background-color: rgba(0, 0, 0, 0.65); }
-      /* line 479, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
-      .gallery .hexagon .hexagon-container:before,
-      .gallery .hexagon .hexagon-container:after {
+      .gallery .hexagon .hexagon-container:before, .gallery .hexagon .hexagon-container:after {
         content: "";
         pointer-events: none;
         position: absolute;
@@ -472,25 +391,20 @@ a {
         -webkit-transform: rotate(-60deg) skewY(30deg);
         -ms-transform: rotate(-60deg) skewY(30deg);
         transform: rotate(-60deg) skewY(30deg); }
-      /* line 489, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
       .gallery .hexagon .hexagon-container:before {
         border-left: px solid #40B5E5;
         border-bottom: px solid #40B5E5;
         bottom: 0;
         left: -1px; }
-      /* line 495, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
       .gallery .hexagon .hexagon-container:after {
         border-right: px solid #40B5E5;
         border-top: px solid #40B5E5;
         top: 0;
         right: -1px; }
-    /* line 502, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .gallery .hexagon:last-child {
       margin-bottom: 20px; }
-    /* line 506, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .gallery .hexagon:hover .description {
       opacity: 0; }
-  /* line 511, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .gallery .description {
     position: absolute;
     top: 0;
@@ -499,12 +413,10 @@ a {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     transition: all 0.3s ease; }
-  /* line 520, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .gallery .portfolio-img {
     width: 100%;
     height: 100%;
     position: relative; }
-    /* line 524, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .gallery .portfolio-img img {
       position: absolute;
       left: 50%;
@@ -514,7 +426,6 @@ a {
 /*
     Contact Form
 */
-/* line 538, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .overlay {
   position: fixed;
   top: 0;
@@ -525,27 +436,30 @@ a {
   opacity: 1;
   transition: all 0.3s ease; }
 
-/* line 549, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .contact {
   position: fixed;
-  top: 20%;
+  top: 50%;
   left: 50%;
   width: 250px;
-  margin-left: -125px;
   background-color: #232323;
   opacity: 1;
-  transition: all 0.3s ease; }
-  /* line 558, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%); }
+  .contact .close-contact {
+    position: absolute;
+    cursor: pointer;
+    color: #40B5E5;
+    top: 5px;
+    right: 15px;
+    font-size: 1.2em; }
   .contact h2 {
     text-align: center;
     color: #40B5E5;
     font-family: "latoThin";
     border-left: 5px solid #40B5E5; }
-  /* line 564, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact .input_area {
     margin: 30px 0;
     position: relative; }
-  /* line 568, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact label {
     text-align: center;
     display: block;
@@ -555,7 +469,6 @@ a {
     width: 100%;
     transition: all 0.3s ease;
     z-index: 1; }
-  /* line 579, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact input[type="text"],
   .contact input[type="email"] {
     background: transparent;
@@ -568,7 +481,6 @@ a {
     position: relative;
     z-index: 99999;
     color: #fff; }
-    /* line 590, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .contact input[type="text"]:focus,
     .contact input[type="email"]:focus {
       width: calc(100%-20px);
@@ -576,17 +488,14 @@ a {
       background-color: transparent;
       color: #fff;
       outline: none; }
-      /* line 596, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
       .contact input[type="text"]:focus ~ label,
       .contact input[type="email"]:focus ~ label {
         top: -20px;
         font-size: .8em; }
-    /* line 601, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .contact input[type="text"] ~ .filled,
     .contact input[type="email"] ~ .filled {
       top: -20px;
       font-size: .8em; }
-  /* line 606, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact textarea {
     background: rgba(255, 255, 255, 0.1);
     border: 0;
@@ -597,28 +506,21 @@ a {
     resize: vertical;
     /* user can resize vertically, but width is fixed */
     overflow: auto; }
-    /* line 617, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .contact textarea:focus ~ label {
       top: -20px;
       font-size: .8em; }
-    /* line 622, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .contact textarea ~ .filled {
       top: -20px;
       font-size: .8em; }
-  /* line 627, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact .warning {
     color: red; }
-  /* line 630, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact input.warning {
     border-bottom: 1px solid red; }
-  /* line 633, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact textarea.warning {
     border: 1px solid red; }
-  /* line 636, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact sub {
     text-align: center;
     display: block; }
-  /* line 640, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .contact .submit {
     color: #fff;
     font-size: 1em;
@@ -632,183 +534,138 @@ a {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     margin: 10px auto; }
-    /* line 653, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .contact .submit:hover {
       color: #40B5E5;
       border: 2.5px solid #40B5E5; }
 
 /*-------------Grid-------------*/
-/* line 663, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .container {
   width: 100%;
   max-width: 1416px;
   margin: auto; }
 
-/* line 670, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .clearfix:after {
   content: "";
   padding: 1px;
   clear: both; }
 
-/* line 677, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .phoneShow {
   display: block; }
 
 @media screen and (min-width: 200px) {
-  /* line 682, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .container {
     max-width: 250px; }
-  /* line 685, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .hexagon {
     width: 250px;
     min-height: 287.5px;
     margin: 10px 3px 10px 0px; }
-    /* line 689, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .hexagon .description {
       padding-top: 30px; }
-  /* line 693, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .title {
     bottom: 20px; }
-    /* line 695, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .title h1 {
       font-size: 2em; } }
-
 /* Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  /* line 705, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .z_logo {
     width: 40px; } }
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  /* line 711, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .z_logo {
     width: 40px; } }
-
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  /* line 717, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .z_logo {
     width: 40px; } }
-
 @media screen and (min-width: 375px) {
-  /* line 723, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .title {
     bottom: 20%; } }
-
 @media screen and (min-width: 405px) {
-  /* line 729, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .container {
     max-width: 382px; }
-  /* line 732, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .hexagon {
     margin-top: 0px;
     margin-bottom: -69px; }
-    /* line 735, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .hexagon:nth-child(n) {
       margin-left: 0px; }
-    /* line 738, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .hexagon:nth-child(even) {
       margin-left: 127px; } }
-
 @media screen and (min-width: 545px) {
-  /* line 745, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .container {
     max-width: 508px; }
-  /* line 749, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .hexagon:nth-child(n) {
     margin-left: 0px; }
-  /* line 752, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .hexagon:nth-child(3n) {
     margin-left: 127px; } }
-
 @media screen and (min-width: 755px) {
-  /* line 759, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .container {
     max-width: 532px; }
-  /* line 762, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .hexagon {
     width: 350px;
     min-height: 404.5px;
     margin-bottom: -96px;
     margin-right: 4px; }
-    /* line 767, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .hexagon .description {
       padding-top: 50px; }
-    /* line 770, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .hexagon:nth-child(n) {
       margin-left: 0; }
-    /* line 773, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .hexagon:nth-child(even) {
       margin-left: 176px; } }
-
 @media screen and (min-width: 768px) {
-  /* line 780, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .title {
     bottom: 20%; }
-    /* line 782, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
     .title h1 {
       font-size: 4em; } }
-
 @media screen and (min-width: 805px) {
-  /* line 789, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .container {
     max-width: 711px; }
-  /* line 793, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .hexagon:nth-child(n) {
     margin-left: 0; }
-  /* line 796, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .hexagon:nth-child(3n) {
     margin-left: 176px; }
-  /* line 800, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .half {
     width: 50%;
     float: left;
     padding-bottom: 50px; }
-  /* line 805, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .phoneShow {
     display: none; } }
-
 @media screen and (min-width: 905px) {
-  /* line 811, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .container {
     max-width: 885px; }
-  /* line 815, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .hexagon:nth-child(n) {
     margin-left: 0; }
-  /* line 820, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
-  .hexagon:nth-child(3),
-  .hexagon:nth-child(7),
-  .hexagon:nth-child(11) {
+  .hexagon:nth-child(3), .hexagon:nth-child(7), .hexagon:nth-child(11) {
     margin-left: 176px; } }
-
+@media screen and (min-width: 935px) {
+  .title h1 {
+    font-size: 4em; } }
 @media screen and (min-width: 1255px) {
-  /* line 827, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .container {
     max-width: 1238px; }
-  /* line 831, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .hexagon:nth-child(n) {
     margin-left: 0; }
-  /* line 835, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
-  .hexagon:nth-child(4),
-  .hexagon:nth-child(10) {
+  .hexagon:nth-child(4), .hexagon:nth-child(10) {
     margin-left: 176px; }
-  /* line 839, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .title h1 {
     font-size: 6em; } }
-
 @media screen and (min-width: 1455px) {
-  /* line 845, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
   .container {
     max-width: 1416px; }
-  /* line 849, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
+
   .hexagon:nth-child(n) {
     margin-left: 0; }
-  /* line 853, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
-  .hexagon:nth-child(5),
-  .hexagon:nth-child(12) {
+  .hexagon:nth-child(5), .hexagon:nth-child(12) {
     margin-left: 176px; } }
-
 /*-------------Animations-------------*/
-/* line 862, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .s-width {
   -webkit-animation: updateWidth 2s forwards;
   animation: updateWidth 2s forwards;
@@ -816,19 +673,16 @@ a {
   -ms-transform-origin: center;
   transform-origin: center; }
 
-/* line 872, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .slide-left .s2,
 .slide-left .s3 {
   -webkit-animation: slideLeft 1.5s forwards;
   animation: slideLeft 1.5s forwards; }
 
-/* line 880, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .slide-right .s2,
 .slide-right .s3 {
   -webkit-animation: slideRight 1.5s forwards;
   animation: slideRight 1.5s forwards; }
 
-/* line 886, C:/Users/Eric/Documents/Zipbug.github.io/css/main.scss */
 .fade-in {
   -webkit-animation: fadein 4s forwards;
   animation: fadein 4s forwards; }
@@ -838,13 +692,11 @@ a {
     opacity: 0; }
   to {
     opacity: 1; } }
-
 @keyframes fadein {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
-
 @-webkit-keyframes slideLeft {
   from {
     -webkit-transform: translateX(9999px);
@@ -852,7 +704,6 @@ a {
   to {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
-
 @keyframes slideLeft {
   from {
     -webkit-transform: translateX(9999px);
@@ -860,7 +711,6 @@ a {
   to {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
-
 @-webkit-keyframes slideRight {
   from {
     -webkit-transform: translateX(-9999px);
@@ -868,7 +718,6 @@ a {
   to {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
-
 @keyframes slideRight {
   from {
     -webkit-transform: translateX(-9999px);
@@ -876,7 +725,6 @@ a {
   to {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
-
 @-webkit-keyframes updateWidth {
   from {
     -webkit-transform: scaleX(0);
@@ -886,7 +734,6 @@ a {
     opacity: 1;
     -webkit-transform: scaleX(1);
     transform: scaleX(1); } }
-
 @keyframes updateWidth {
   from {
     -webkit-transform: scaleX(0);

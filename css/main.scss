@@ -258,16 +258,14 @@ a {
     background-color: #1B2124;
     position: relative;
     .z_logo {
+      margin:0 auto;
+      width:80%;
       max-width: 350px;
-      top: 30%;
-      margin: auto;
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      max-height: 350px;
+      padding-top:70px;
       svg {
         width: 100%;
+        height:100%;
       }
     }
     .s0 {
@@ -302,12 +300,11 @@ a {
       color: #ededed;
       width: 80%;
       max-width: 1200px;
-      padding-top: 25%;
+      margin:auto;
+      padding-top:0 ;
       text-align: center;
       display: block;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+
       h1 {
         text-transform: capitalize;
         margin: 0;
@@ -548,13 +545,21 @@ a {
 
 .contact {
   position: fixed;
-  top: 20%;
+  top: 50%;
   left: 50%;
   width: 250px;
-  margin-left: -125px;
   background-color: #232323;
   opacity: 1;
   transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+    .close-contact{
+        position: absolute;
+        cursor: pointer;
+        color: $z-blue;
+        top:5px;
+        right:15px;
+        font-size:1.2em;
+    }
   h2 {
     text-align: center;
     color: $z-blue;
@@ -822,7 +827,11 @@ a {
     }
   }
 }
-
+@media screen and (min-width:935px) {
+ .title h1 {
+    font-size: 4em;
+  }
+}
 @media screen and (min-width:1255px) {
   .container {
     max-width: 1238px;

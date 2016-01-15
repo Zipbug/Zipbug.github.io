@@ -3,7 +3,7 @@ $(document).ready(function () {
     event.preventDefault();
     $('.main-nav').toggleClass('open');
   });
-  $('.contact-link').click(function (event) {
+  $('.contact-link, .close-contact').click(function (event) {
     event.preventDefault();
     $('.overlay, .contact').toggleClass('hidden fade-in');
   });
