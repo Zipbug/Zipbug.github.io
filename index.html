@@ -7,6 +7,13 @@
 <!--<![endif]-->
 
 <head>
+	
+   <!--Redirect for https-->
+   <script>
+	    var host = "zipbugdev.com";
+	    if ((host == window.location.host) && (window.location.protocol != "https:"))
+	        window.location.protocol = "https";
+   </script>
 
   <!-- Basic Page Needs
   ================================================== -->
@@ -14,6 +21,7 @@
   <title>Zipbug Development</title>
   <meta name="description" content="custom quality web development">
   <meta name="author" content="Eric Evans">
+  <link rel="canonical" href="https://zipbugdev.com" />
 
   <!-- Mobile Specific Metas
   ================================================== -->
