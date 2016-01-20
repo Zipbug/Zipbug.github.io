@@ -5,7 +5,7 @@ $(document).ready(function () {
   });
   $('.contact-link, .close-contact').click(function (event) {
     event.preventDefault();
-    $('.overlay, .contact').toggleClass('hidden fade-in');
+    $('.overlay, .contact').toggleClass('hidden fade-in-fast');
   });
   $(function () {
     $('a[href*=#]:not([href=#])').click(function () {
