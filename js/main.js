@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  var d = new Date();
+  var n = d.getFullYear();
+  $('.date').text(n);
   $('.trigger').click(function (event) {
     event.preventDefault();
     $('.main-nav').toggleClass('open');
