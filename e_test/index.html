@@ -156,11 +156,9 @@ function menuToggle(event /* obj */){
     var target = $(event.currentTarget);
     var nav = $('.site-nav');
     if(!nav.hasClass('open')){
-        nav.addClass('open').on('transitionend webkitTransitionEnd oTransitionEnd', function () {
-            nav.addClass('spread').off('transitionend webkitTransitionEnd oTransitionEnd');
-        });
+        nav.removeClass('close').addClass('open');
     }else{
-        nav.removeClass('spread').on('transitionend webkitTransitionEnd oTransitionEnd',     function(){
+        nav.addClass('close').on('transitionend webkitTransitionEnd oTransitionEnd',     function(){
             nav.removeClass('open').off('transitionend webkitTransitionEnd oTransitionEnd');
         });
     }
