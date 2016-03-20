@@ -233,10 +233,8 @@ pre {
       position: absolute;
       height: 111px;
       width: 117px;
-      position: absolute;
       left: 50%;
-      transform: translate(-50%);
-      right: 0; }
+      margin-left: -58px; }
       .site-nav .trigger .page-link .p-gram {
         fill: #C8D8BD; }
       .site-nav .trigger .page-link span {
@@ -256,32 +254,26 @@ pre {
     padding-bottom: 5px;
     transform: translateX(-50%) scale(1); }
     .site-nav.open .trigger .page-link {
-      transition: all 0.3s linear; }
-  .site-nav.spread .page-link {
-    transition: all 0.15s linear; }
-    .site-nav.spread .page-link:nth-child(1) {
-      left: 50%;
-      animation-name: moveEnd-left;
-      animation-duration: 0.3s;
+      transition: all 0.3s linear;
+      animation-direction: normal;
       animation-fill-mode: forwards;
       animation-timing-function: linear; }
-    .site-nav.spread .page-link:nth-child(4) {
-      left: auto;
-      animation-name: moveEnd-right;
-      animation-duration: 0.3s;
-      animation-fill-mode: forwards;
-      animation-timing-function: linear; }
-    .site-nav.spread .page-link:nth-child(2) {
-      left: 40px;
-      top: -1px;
-      transform: rotate(37deg);
-      transition: all 0.15s linear; }
-    .site-nav.spread .page-link:nth-child(3) {
-      left: auto;
-      right: 40px;
-      top: -1px;
-      transform: rotate(-37deg);
-      transition: all 0.15s linear; }
+      .site-nav.open .trigger .page-link:nth-child(1) {
+        animation-name: moveEnd-left;
+        animation-duration: 0.4s; }
+      .site-nav.open .trigger .page-link:nth-child(2) {
+        animation-name: moveSide-left;
+        animation-duration: 0.3s; }
+      .site-nav.open .trigger .page-link:nth-child(3) {
+        animation-name: moveSide-right;
+        animation-duration: 0.3s; }
+      .site-nav.open .trigger .page-link:nth-child(4) {
+        animation-name: moveEnd-right;
+        animation-duration: 0.4s; }
+  .site-nav.close .trigger {
+    transform: translate(-50%) scale(0.1); }
+    .site-nav.close .trigger .page-link {
+      animation-direction: reverse; }
 
 .nav-bottom-bar {
   position: absolute;
@@ -435,30 +427,52 @@ pre {
   0% {
     top: 0;
     left: 50%;
-    transform: translateX(-50%); }
+    margin-left: -58px; }
   50% {
-    left: auto;
-    right: 40px;
+    left: 140px;
     top: -1px;
+    margin-left: 0;
     transform: rotate(-37deg); }
   100% {
-    left: auto;
+    left: 203px;
     top: -58px;
-    right: 0px;
-    transform: rotate(-73deg) translateX(0); } }
+    margin-left: 0;
+    transform: rotate(-73deg); } }
 @keyframes moveEnd-left {
   0% {
     top: 0;
     left: 50%;
-    transform: translateX(-50%); }
+    margin-left: -58px; }
   50% {
     left: 40px;
     top: -1px;
+    margin-left: 0;
     transform: rotate(37deg); }
   100% {
     top: -58px;
     left: 0;
+    margin-left: 0;
     transform: rotate(72deg); } }
+@keyframes moveSide-left {
+  from {
+    top: 0;
+    left: 50%;
+    margin-left: -58px; }
+  to {
+    left: 40px;
+    top: -1px;
+    margin-left: 0;
+    transform: rotate(37deg); } }
+@keyframes moveSide-right {
+  from {
+    top: 0;
+    left: 50%;
+    margin-left: -58px; }
+  to {
+    left: 163px;
+    margin-left: 0;
+    top: -1px;
+    transform: rotate(-37deg); } }
 /**
  * Syntax highlighting styles
  */
