@@ -568,7 +568,7 @@ section {
   top: 0;
   width: 50%;
   height: 100%;
-  background-image: url("..//images/backgrounds/dark_mosaic.png");
+  background-image: url("../images/backgrounds/dark_mosaic.png");
   z-index: 1000;
   -webkit-transform: translateX(0);
   /* Chrome, Opera 15+, Safari 3.1+ */
