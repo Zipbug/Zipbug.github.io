@@ -1,6 +1,6 @@
 html,
 body {
-  background-image: url("/images/backgrounds/dark_mosaic.png");
+  background-image: url("../images/backgrounds/dark_mosaic.png");
   height: 100%;
   width: 100%;
   padding: 0;
@@ -77,17 +77,17 @@ section {
     height: 50px;
     margin: 20px auto 5px auto; }
   #resume .objectiveIcon {
-    background: url(../images/icons.png) -55px 0; }
+    background: url(/images/icons.png) -55px 0; }
   #resume .experienceIcon {
-    background: url(../images/icons.png) -158px 0; }
+    background: url(/images/icons.png) -158px 0; }
   #resume .recreationIcon {
     margin-top: 60px;
-    background: url(../images/icons.png) -2px 0; }
+    background: url(/images/icons.png) -2px 0; }
   #resume .skillsIcon {
-    background: url(../images/icons.png) -210px 0; }
+    background: url(/images/icons.png) -210px 0; }
   #resume .educationIcon {
     margin-top: 180px;
-    background: url(../images/icons.png) -106px 0; }
+    background: url(/images/icons.png) -106px 0; }
   #resume .feelGood {
     float: right;
     position: relative;
@@ -568,7 +568,7 @@ section {
   top: 0;
   width: 50%;
   height: 100%;
-  background-image: url("/images/backgrounds/dark_mosaic.png");
+  background-image: url("..//images/backgrounds/dark_mosaic.png");
   z-index: 1000;
   -webkit-transform: translateX(0);
   /* Chrome, Opera 15+, Safari 3.1+ */

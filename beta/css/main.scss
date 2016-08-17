@@ -1,7 +1,7 @@
 $z-blue:#40B5E5;
 html,
 body {
-    background-image: url('/images/backgrounds/dark_mosaic.png');
+    background-image: url('../images/backgrounds/dark_mosaic.png');
     height: 100%;
     width: 100%;
     padding: 0;
@@ -90,21 +90,21 @@ section {
         margin: 20px auto 5px auto;
     }
     .objectiveIcon {
-        background: url(../images/icons.png) -55px 0;
+        background: url(/images/icons.png) -55px 0;
     }
     .experienceIcon {
-        background: url(../images/icons.png) -158px 0;
+        background: url(/images/icons.png) -158px 0;
     }
     .recreationIcon {
         margin-top: 60px;
-        background: url(../images/icons.png) -2px 0;
+        background: url(/images/icons.png) -2px 0;
     }
     .skillsIcon {
-        background: url(../images/icons.png) -210px 0;
+        background: url(/images/icons.png) -210px 0;
     }
     .educationIcon {
         margin-top: 180px;
-        background: url(../images/icons.png) -106px 0;
+        background: url(/images/icons.png) -106px 0;
     }
     .feelGood {
         float: right;
@@ -711,7 +711,7 @@ section {
         top: 0;
         width: 50%;
         height: 100%;
-        background-image: url('/images/backgrounds/dark_mosaic.png');
+        background-image: url('..//images/backgrounds/dark_mosaic.png');
         z-index: 1000;
         -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
         -ms-transform: translateX(0);  /* IE 9 */
