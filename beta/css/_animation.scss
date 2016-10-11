@@ -1,0 +1,123 @@
+/*-------------Animations-------------*/
+
+.s-width {
+    -webkit-animation: updateWidth 2s forwards;
+    animation: updateWidth 2s forwards;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+}
+
+.slide-left {
+    .s2,
+    .s3 {
+        -webkit-animation: slideLeft 1.5s forwards;
+        animation: slideLeft 1.5s forwards;
+    }
+}
+
+.slide-right {
+    .s2,
+    .s3 {
+        -webkit-animation: slideRight 1.5s forwards;
+        animation: slideRight 1.5s forwards;
+    }
+}
+
+.fade-in {
+    -webkit-animation: fadein 4s forwards;
+    animation: fadein 4s forwards;
+}
+
+.fade-in-fast {
+    -webkit-animation: fadein 1s forwards;
+    animation: fadein 1s forwards;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slideLeft {
+    from {
+        -webkit-transform: translateX(9999px);
+        transform: translateX(9999px);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        -webkit-transform: translateX(9999px);
+        transform: translateX(9999px);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideRight {
+    from {
+        -webkit-transform: translateX(-9999px);
+        transform: translateX(-9999px);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        -webkit-transform: translateX(-9999px);
+        transform: translateX(-9999px);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes updateWidth {
+    from {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+@keyframes updateWidth {
+    from {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
