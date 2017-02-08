@@ -1,9 +1,11 @@
-@import 'nav';
-@import 'resume';
+@import 'fonts';
+@import 'animation';
+@import 'forms';
 @import 'gallery';
 @import 'grid';
 @import 'loader';
-@import 'animation';
+@import 'nav';
+@import 'resume';
 
 
 $z-blue:#40B5E5;
@@ -35,7 +37,9 @@ body {
     &.scale-up{
         section{
             transform: scale(0.8);
-            overflow: hidden;
+            .content{
+                overflow: hidden;                
+            }
         }
     }
 }
@@ -45,18 +49,24 @@ section {
     width: 100vw;
     position: relative;
     display: inline-block;
-    overflow: auto;
     transform: scale(1);
     transition: transform 300ms ease;
+    
     &:not(#gallery) {
         margin-left: 100%;
         &#resume {
             margin-left: 200%;
         }
     }
-    &#gallery {
+    &#gallery {        
         margin-right: 100%;
         margin-top: -100vh;
+    }
+    .content{
+        width:calc(100% - 22px);
+        height:calc(100% - 22px);
+        overflow: auto;
+        margin:11px auto;
     }
 }
 

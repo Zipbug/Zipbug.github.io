@@ -17,8 +17,13 @@ $(document).ready(function () {
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
           $('html,body').animate({
+            transform: "scal(0.8)", 
             scrollTop: target.offset().top
-          }, 1000);
+          }, 1000, function(){
+               $('html,body').animate({
+                    transform: "scal(1)", 
+               });
+          });
           return false;
         }
       }

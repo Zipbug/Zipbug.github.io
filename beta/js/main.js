@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    scrollToElement($("#main"), false);
+    var lastLocation = window.location.hash ? window.location.hash : "#main";
+    scrollToElement($(lastLocation), false);
     setTimeout(function () {
         $('body').addClass('loaded');
     }, 3000);
@@ -13,28 +14,17 @@ $(document).ready(function () {
 
     $(window).resize(function () {
         $('.scroll-body').stop();
-        scrollToElement($('.active'), false);
+        setTimeout(function(){
+            scrollToElement($('section.active'), false);            
+        });
     });
-//    $('.gallery-item').hover(function () {
-//            $(this).find('.overlay').animate({
-//                opacity: 0
-//            }, 300);
-//        },
-//        function () {
-//            $(this).find('.overlay').animate({
-//                opacity: 1
-//            }, 300);
-//        });
-//    $('.gallery-item').click(function () {
-//        $(this).find('.flip').animate({
-//            textIndent: 0
-//        }, {
-//            step: function (now, fx) {
-//                $(this).css('-webkit-transform', 'rotateY(' + now + 'deg)');
-//            },
-//            duration: "slow"
-//        }, 'linear');
-//    });
+   $('.toggle-nav').click(function(){
+       var open = $('nav').hasClass('.open');
+       
+       $(this).attr("aria-expanded", !open).toggleClass('open'); 
+       $('nav').attr("aria-expanded", !open).toggleClass('open'); 
+   });
+    
 });
 
 Snap.load('/beta/Zip-Bug-wingged.svg', function (bug) {
@@ -42,11 +32,10 @@ Snap.load('/beta/Zip-Bug-wingged.svg', function (bug) {
     z_bug.append(bug);
     $(document).ready(function () {
         setTimeout(function () {
-            animateBug(bug);
+            animateBug(bug);            
         }, 3600);
     });
 });
-
 
 function animateBug(bug) {
     var l_wing = bug.select('.wing.left'),
@@ -61,13 +50,18 @@ function animateBug(bug) {
 }
 
 function scrollToElement(ele, animate) {
+   
     var $w_top = $('.scroll-body').scrollTop() + ele.offset().top,
         $w_left = $('.scroll-body').scrollLeft() + ele.offset().left,
-        timeout = animate ? 1000 : 0;
-
-    $('.active').removeClass('active');
-    ele.addClass('active');
-    var scale = 0.08;
+        timeout = animate ? 1000 : 0,
+        scale = 0.08;
+    
+    $('section.active').removeClass('active');
+                       ele.addClass('active');
+    
+    $('a.active').removeClass('active');
+    $('a'  + '[data-id="'+ ele[0].id +'"]').addClass('active');
+    
    
     $('.scroll-body').addClass('scale-up').animate({
         scrollTop: $w_top,

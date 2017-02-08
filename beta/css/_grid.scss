@@ -22,9 +22,9 @@
     .container {
         max-width: 250px;
     }
-    .hexagon {
+    .hexagon, .gallery-hex {
         width: 250px;
-        min-height: 287.5px; // Width *1.15
+        height: 287.5px; // Width *1.15
         margin: 10px 3px 10px 0px;
         .description {
             padding-top: 30px;
@@ -42,8 +42,12 @@
     width: 80%;
     margin: auto;
 }
-
-
+.toggle-nav{
+    display: block;
+}
+nav{
+    width:0px;
+}
 /* Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -74,7 +78,7 @@
     .container {
         max-width: 382px;
     }
-    .hexagon {
+    .gallery-hex {
         margin-top: 0px;
         margin-bottom: -69px;
         &:nth-child(n) {
@@ -90,7 +94,7 @@
     .container {
         max-width: 508px;
     }
-    .hexagon {
+    .gallery-hex {
         &:nth-child(n) {
             margin-left: 0px;
         }
@@ -104,9 +108,9 @@
     .container {
         max-width: 532px;
     }
-    .hexagon {
+    .gallery-hex {
         width: 350px;
-        min-height: 404.5px; // Width *1.15
+        height: 404.5px; // Width *1.15
         margin-bottom: -96px;
         margin-right: 4px;
         .description {
@@ -128,13 +132,20 @@
             font-size: 4em;
         }
     }
+    .toggle-nav{
+        display: none;
+    }
+    nav{
+        width: 120px;
+        border-color:rgba(64, 181, 229, 0.6) !important;
+    }
 }
 
 @media screen and (min-width: 805px) {
     .container {
         max-width: 711px;
     }
-    .hexagon {
+    .gallery-hex {
         &:nth-child(n) {
             margin-left: 0;
         }
@@ -156,7 +167,7 @@
     .container {
         max-width: 885px;
     }
-    .hexagon {
+    .gallery-hex {
         &:nth-child(n) {
             margin-left: 0;
         }
@@ -178,7 +189,7 @@
     .container {
         max-width: 1238px;
     }
-    .hexagon {
+    .gallery-hex {
         &:nth-child(n) {
             margin-left: 0;
         }
@@ -196,7 +207,7 @@
     .container {
         max-width: 1416px;
     }
-    .hexagon {
+    .gallery-hex {
         &:nth-child(n) {
             margin-left: 0;
         }

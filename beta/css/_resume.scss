@@ -53,30 +53,11 @@
         width: 120px;
         margin: auto;
     }
-    hr.frontEnd {
-        background: #2D90BA;
-        color: #181818;
-        height: 2px;
-        margin: 10px auto;
-        padding: 0;
-        width: 350px;
-        text-align: center;
-        &::after {
-            background: #DBDBDB;
-            display: inline-block;
-            content: "Front-End Developer";
-            font-family: "latothin";
-            font-size: 1.8em;
-            font-weight: 100;
-            padding: 0 0.35em;
-            position: relative;
-            top: -0.35em;
-        }
-    }
-    .headerInfo h2 {
+   
+    .bg-hr{
         width: 250px;
         font-size: 52px;
-        margin-left: 60px;
+        margin:auto;
     }
     .objective {
         margin: 0 0 80px 0;
@@ -85,13 +66,38 @@
             font-family: 'latobold';
             font-size: 2em;
         }
-    }
-    h3 {
-        color: #14212a;
-        text-align: center;
-        opacity: 0.6;
-        margin-bottom: 15px;
-        font-size: 1.5em;
+        h3 {
+            color:#fff;
+            font-size: 1.5em;
+            position: relative;
+            font-family: 'latothin';
+            background: -moz-radial-gradient(center, ellipse cover, rgba(19,19,19,1) 0%, rgba(28,28,28,0.75) 9%, rgba(28,28,28,0) 36%);
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(19,19,19,1)), color-stop(9%, rgba(28,28,28,0.75)), color-stop(36%, rgba(28,28,28,0)));
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(19,19,19,1) 0%, rgba(28,28,28,0.75) 9%, rgba(28,28,28,0) 36%);
+            background: -o-radial-gradient(center, ellipse cover, rgba(19,19,19,1) 0%, rgba(28,28,28,0.75) 9%, rgba(28,28,28,0) 36%);
+            background: -ms-radial-gradient(center, ellipse cover, rgba(19,19,19,1) 0%, rgba(28,28,28,0.75) 9%, rgba(28,28,28,0) 36%);
+            background: radial-gradient(ellipse at center, rgba(19,19,19,1) 0%, rgba(28,28,28,0.75) 9%, rgba(28,28,28,0) 36%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#1c1c1c', GradientType=1 );
+            z-index: 5;
+                
+            &:before, &:after{
+                content:"";
+                width:150%;
+                position: absolute;
+                left: 50%;                
+                height:1px;
+                transform: translate(-50%, -50%);
+                background-color:#2790ba;
+                z-index: -1;
+            }
+            &:before{
+                top: calc(50% - 2px);
+            }
+            &:after{
+                top: calc(50% + 2px);
+            }
+            
+        }
     }
     .download {
         text-align: center;
