@@ -5,7 +5,8 @@ $(document).ready(function () {
         $('body').addClass('loaded');
     }, 3000);
 
-    $('nav a').click(function () {
+    $('nav a').click(function (event) {
+        event.preventDefault();
         var t_id = $(this).data('id'),
             target = $("#" + t_id);
 
