@@ -28,7 +28,7 @@ $(document).ready(function () {
     
 });
 
-Snap.load('/beta/Zip-Bug-wingged.svg', function (bug) {
+Snap.load('/beta/ZIP-BUG-WINGS.svg', function (bug) {
     var z_bug = Snap('.zipbug-shell');
     z_bug.append(bug);
     $(document).ready(function () {
