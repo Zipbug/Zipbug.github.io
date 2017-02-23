@@ -101,7 +101,7 @@ function renderGalleryItem(item, index){
                         '<clipPath id="hex">' +
                             '<polygon points="174.07 0 348.14 100.5 348.14 301.5 174.07 402 0 301.5 0 100.5 174.07 0" />' +
                         '</clipPath>' +
-                        '<image x="-80" y="0" width="350" height="405" xlink:href="' + item.image + '" clip-path="url(#hex)" alt="' + item.name + '"></image>' +
+                        '<image x="-80" y="0" width="630" height="430" xlink:href="' + item.image + '" clip-path="url(#hex)" alt="' + item.name + '"></image>' +
                         '<polygon class="overlay" points="174.07 0 348.14 100.5 348.14 301.5 174.07 402 0 301.5 0 100.5 174.07 0" />' +
                     '</svg>';
     
