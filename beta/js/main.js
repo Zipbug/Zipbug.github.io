@@ -15,17 +15,17 @@ $(document).ready(function () {
 
     $(window).resize(function () {
         $('.scroll-body').stop();
-        setTimeout(function(){
-            scrollToElement($('section.active'), false);            
+        setTimeout(function () {
+            scrollToElement($('section.active'), false);
         });
     });
-   $('.toggle-nav').click(function(){
-       var open = $('nav').hasClass('.open');
-       
-       $(this).attr("aria-expanded", !open).toggleClass('open'); 
-       $('nav').attr("aria-expanded", !open).toggleClass('open'); 
-   });
-    
+    $('.toggle-nav').click(function () {
+        var open = $('nav').hasClass('.open');
+
+        $(this).attr("aria-expanded", !open).toggleClass('open');
+        $('nav').attr("aria-expanded", !open).toggleClass('open');
+    });
+
 });
 
 Snap.load('/beta/ZIP-BUG-WINGS.svg', function (bug) {
@@ -33,7 +33,7 @@ Snap.load('/beta/ZIP-BUG-WINGS.svg', function (bug) {
     z_bug.append(bug);
     $(document).ready(function () {
         setTimeout(function () {
-            animateBug(bug);            
+            animateBug(bug);
         }, 3600);
     });
 });
@@ -51,23 +51,23 @@ function animateBug(bug) {
 }
 
 function scrollToElement(ele, animate) {
-   
+
     var $w_top = $('.scroll-body').scrollTop() + ele.offset().top,
         $w_left = $('.scroll-body').scrollLeft() + ele.offset().left,
         timeout = animate ? 1000 : 0,
         scale = 0.08;
-    
+
     $('section.active').removeClass('active');
-                       ele.addClass('active');
-    
+    ele.addClass('active');
+
     $('a.active').removeClass('active');
-    $('a'  + '[data-id="'+ ele[0].id +'"]').addClass('active');
-    
-   
+    $('a' + '[data-id="' + ele[0].id + '"]').addClass('active');
+
+
     $('.scroll-body').addClass('scale-up').animate({
         scrollTop: $w_top,
         scrollLeft: $w_left,
-    }, timeout, function(){
+    }, timeout, function () {
         $('.scroll-body').removeClass('scale-up');
     });
 }

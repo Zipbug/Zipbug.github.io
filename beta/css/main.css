@@ -1,26 +1,26 @@
 @font-face {
-  font-family: 'latobold';
+  font-family: 'lato';
   src: url("../fonts/lato-bold-webfont.eot");
   src: url("../fonts/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bold-webfont.woff2") format("woff2"), url("../fonts/lato-bold-webfont.woff") format("woff"), url("../fonts/lato-bold-webfont.ttf") format("truetype"), url("../fonts/lato-bold-webfont.svg#latobold") format("svg");
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal; }
 @font-face {
-  font-family: 'latoregular';
+  font-family: 'lato';
   src: url("../fonts/lato-regular-webfont.eot");
   src: url("../fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype"), url("../fonts/lato-regular-webfont.svg#latoregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'latosemibold';
+  font-family: 'lato';
   src: url("../fonts/lato-semibold-webfont.eot");
   src: url("../fonts/lato-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-semibold-webfont.woff2") format("woff2"), url("../fonts/lato-semibold-webfont.woff") format("woff"), url("../fonts/lato-semibold-webfont.ttf") format("truetype"), url("../fonts/lato-semibold-webfont.svg#latosemibold") format("svg");
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal; }
 @font-face {
-  font-family: 'latothin';
+  font-family: 'lato';
   src: url("../fonts/lato-thin-webfont.eot");
   src: url("../fonts/lato-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-thin-webfont.woff2") format("woff2"), url("../fonts/lato-thin-webfont.woff") format("woff"), url("../fonts/lato-thin-webfont.ttf") format("truetype"), url("../fonts/lato-thin-webfont.svg#latothin") format("svg");
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal; }
 /*-------------Animations-------------*/
 .s-width {
@@ -627,6 +627,9 @@ nav {
   #resume .educationIcon {
     margin-top: 180px;
     background: url(/images/icons.png) -106px 0; }
+  #resume h3 {
+    text-align: center;
+    font-size: 1.5em; }
   #resume .feelGood {
     float: right;
     position: relative;
@@ -658,20 +661,13 @@ nav {
     margin: 0 0 80px 0;
     text-align: center; }
     #resume .objective h2 {
-      font-family: 'latobold';
-      font-size: 2em; }
+      font-weight: 600px;
+      font-size: 2.5em; }
     #resume .objective h3 {
       color: #fff;
       font-size: 1.5em;
+      font-weight: 100;
       position: relative;
-      font-family: 'latothin';
-      background: -moz-radial-gradient(center, ellipse cover, #131313 0%, rgba(28, 28, 28, 0.75) 9%, rgba(28, 28, 28, 0) 36%);
-      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #131313), color-stop(9%, rgba(28, 28, 28, 0.75)), color-stop(36%, rgba(28, 28, 28, 0)));
-      background: -webkit-radial-gradient(center, ellipse cover, #131313 0%, rgba(28, 28, 28, 0.75) 9%, rgba(28, 28, 28, 0) 36%);
-      background: -o-radial-gradient(center, ellipse cover, #131313 0%, rgba(28, 28, 28, 0.75) 9%, rgba(28, 28, 28, 0) 36%);
-      background: -ms-radial-gradient(center, ellipse cover, #131313 0%, rgba(28, 28, 28, 0.75) 9%, rgba(28, 28, 28, 0) 36%);
-      background: radial-gradient(ellipse at center, #131313 0%, rgba(28, 28, 28, 0.75) 9%, rgba(28, 28, 28, 0) 36%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#1c1c1c', GradientType=1 );
       z-index: 5; }
       #resume .objective h3:before, #resume .objective h3:after {
         content: "";
@@ -703,7 +699,9 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  overflow: auto; }
+  overflow: auto;
+  font-family: lato, sans-serif;
+  font-size: 16px; }
 
 .scroll-body {
   height: 100%;
