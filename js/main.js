@@ -1,143 +1,152 @@
 $(document).ready(function () {
-  var d = new Date();
-  var n = d.getFullYear();
-  $('.date').text(n);
-  $('.trigger').click(function (event) {
-    event.preventDefault();
-    $('.main-nav').toggleClass('open');
-  });
-  $('.contact-link, .close-contact').click(function (event) {
-    event.preventDefault();
-    $('.overlay, .contact').toggleClass('hidden fade-in-fast');
-  });
-  $(function () {
-    $('a[href*=#]:not([href=#])').click(function () {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            transform: "scal(0.8)", 
-            scrollTop: target.offset().top
-          }, 1000, function(){
-               $('html,body').animate({
-                    transform: "scal(1)", 
-               });
-          });
-          return false;
-        }
-      }
+    // Add Event Handlers
+    $('nav a').on('click', onNavClick.bind(this));
+    $('.toggle-nav').on('click', onNavToggle.bind(this));
+    $("#contact-form").on('submit', onContactSubmit.bind(this));
+    $("#contact-form input, #contact-form textarea").on('keyup', onKeyUp.bind(this))
+    $(window).on('resize', onWindowResize.bind(this));
+
+    //Check url hash to change positions, otherwise default to home.
+    var lastLocation = window.location.hash ? window.location.hash : "#main";
+    scrollToElement($(lastLocation), false);
+    setTimeout(function () {
+        $('body').addClass('loaded');
+    }, 3000);
+
+});
+
+/*
+    Event reactions
+*/
+
+function onNavClick(eventObj) {
+    eventObj.preventDefault();
+    var animating = $('.scroll-body').is(':animated')
+    if(!animating){
+        var t_id = $(eventObj.currentTarget).data('id'),
+            target = $("#" + t_id);
+        $('.scroll-body').stop();
+
+        scrollToElement(target, true);
+        window.location = "#" + t_id;
+    }
+}
+
+function onWindowResize() {
+    $('.scroll-body').stop();
+    setTimeout(function () {
+        scrollToElement($('section.active'), false);
     });
-  });
-  $('.r_input').blur(function () {
-    if (!$(this).val())
-      $(this).addClass('warning').next('label').addClass('warning');
-    else
-      $(this).removeClass('warning').next('label').addClass('filled').removeClass('warning');
-  });
-  $('#phone').blur(function () {
-    if ($(this).val())
-      $(this).next('label').addClass('filled');
-  });
-  $("#contact-form").submit(function () {
+}
+
+function onNavToggle() {
+    var open = $('nav').hasClass('.open');
+
+    $(this).attr("aria-expanded", !open).toggleClass('open');
+    $('nav').attr("aria-expanded", !open).toggleClass('open');
+}
+
+function onKeyUp(eventObj){
+    var target = $(eventObj.currentTarget); 
+    var value = target.val();
+    if(value){
+        target.next('label').addClass('filled');
+    }else if(!value){
+        target.next('label').removeClass('filled');
+    }
+}
+
+function onContactSubmit() {
     var errors = 0;
-    $('.r_input').map(function () {
-      if (!$(this).val()) {
-        $(this).addClass('warning').next('label').addClass('warning');
-        errors++;
-      } else if ($(this).val()) {
-        $(this).removeClass('warning').next('.warning').removeClass('warning');
-      }
+    var submited = false;
+    $('.r_input').each(function () {        
+        if (!$(this).next('label').hasClass('filled')) {
+            $(this).addClass('warning').next('label').addClass('warning');
+            errors++;
+        } else{
+            $(this).removeClass('warning').next('.warning').removeClass('warning');
+        }
     });
     if (errors > 0) {
-      $('.response').text("The red feilds are required").addClass('warnging');
-      return false;
-    } else {
-      $('.warning').removeClass('warning');
-      $.ajax({
-        dataType: 'jsonp',
-        url: "https://getsimpleform.com/messages/ajax?form_api_token=736387eef38da6ef6867f9638055e07b",
-        data: $('#contact-form').serialize(),
-        success: function () {
-          $('.response').addClass('success').text("Thank you for contacting us, we will be in touch shortly.");
-          $('input').val("");
-        },
-        error: function () {
-          $('.response').addClass('warning').text("Sorry but we were unable to proccess your submition. Please try again later");
-        }
-      })
-      return false; //to stop the form from submitting
-    }
-  });
-});
-/* lazyload.js (c) Lorenzo Giuliani
- * MIT License (http://www.opensource.org/licenses/mit-license.html)
- *
- * expects a list of:
- * `<img src="blank.gif" data-src="my_image.png" width="600" height="400" class="lazy">`
- */
-$(function () {
-  var $q = function (q, res) {
-      if (document.querySelectorAll) {
-        res = document.querySelectorAll(q);
-      } else {
-        var d = document,
-          a = d.styleSheets[0] || d.createStyleSheet();
-        a.addRule(q, 'f:b');
-        for (var l = d.all, b = 0, c = [], f = l.length; b < f; b++)
-          l[b].currentStyle.f && c.push(l[b]);
-
-        a.removeRule(0);
-        res = c;
-      }
-      return res;
-    },
-    addEventListener = function (evt, fn) {
-      window.addEventListener ? this.addEventListener(evt, fn, false) : (window.attachEvent) ? this.attachEvent('on' + evt, fn) : this['on' + evt] = fn;
-    },
-    _has = function (obj, key) {
-      return Object.prototype.hasOwnProperty.call(obj, key);
-    };
-
-  function loadImage(el, fn) {
-    var img = new Image(),
-      src = el.getAttribute('data-src');
-    img.onload = function () {
-      if (!!el.parent)
-        el.parent.replaceChild(img, el)
-      else
-        el.src = src;
-      el.classList.add("fade-in");
-      fn ? fn() : null;
-    }
-    img.src = src;
-  }
-
-  function elementInViewport(el) {
-    var rect = el.getBoundingClientRect()
-
-    return (
-      rect.top >= 0 && rect.left >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-    )
-  }
-
-  var images = new Array(),
-    query = $q('img.lazy'),
-    processScroll = function () {
-      for (var i = 0; i < images.length; i++) {
-        if (elementInViewport(images[i])) {
-          loadImage(images[i], function () {
-            images.splice(i, i);
+        $('.response').text("The red feilds are required");
+        return false;
+    } else if(!submited) {
+        var form = $("#contact-form");
+        form.addClass('collapsed');
+        $('.warning').removeClass('warning');
+        $.ajax({
+            dataType: 'jsonp',
+            url: "https://getsimpleform.com/messages/ajax?form_api_token=736387eef38da6ef6867f9638055e07b",
+            data: $('#contact-form').serialize(),
+            success: function () {
+                submited = true;
+                $('input, textarea').val("").removeClass('filled').next(label).removeClass('.filled');
+                setTimeout(function(){
+                    form.addClass('success submited');
+                }, 800);
+                setTimeout(function(){
+                    form.removeClass('success');
+                }, 1600);
+                 setTimeout(function(){
+                    form.removeClass('collapsed submited');
+                }, 2100);
+            },
+            error: function () {
+                submited = true;
+                setTimeout(function(){
+                    form.removeClass('collapsed');
+                    $('.response').text("Sorry but we were unable to proccess your submition. Please try again later");                           
+                }, 600);
+            }
           });
-        }
-      };
-    };
-  // Array.prototype.slice.call is not callable under our lovely IE8
-  for (var i = 0; i < query.length; i++) {
-    images.push(query[i]);
-  };
+        return false; //to stop the form from submitting
+    }
+}
 
-  processScroll();
-  addEventListener('scroll', processScroll);
+function scrollToElement(ele, animate) {
 
+    var $w_top = $('.scroll-body').scrollTop() + ele.offset().top,
+        $w_left = $('.scroll-body').scrollLeft() + ele.offset().left,
+        timeout = animate ? 1000 : 0,
+        scale = 0.08;
+
+    $('section.active').removeClass('active');
+    ele.addClass('active');
+
+    $('a.active').removeClass('active');
+    $('a' + '[data-id="' + ele[0].id + '"]').addClass('active');
+
+    
+    $('.scroll-body').addClass('scale-up').animate({
+        scrollTop: $w_top,
+        scrollLeft: $w_left,
+    }, timeout, function () {
+        $('.scroll-body').removeClass('scale-up');
+    });
+}
+
+/*
+    Called on load to inject SVG file and anmiate
+*/
+
+Snap.load('ZIP-BUG-WINGS.svg', function (bug) {
+    var z_bug = Snap('.zipbug-shell');
+    z_bug.append(bug);
+    $(document).ready(function () {
+        setTimeout(function () {
+            animateBug(bug);
+        }, 3600);
+    });
 });
+
+function animateBug(bug) {
+    var l_wing = bug.select('.wing.left'),
+        r_wing = bug.select('.wing.right');
+
+    l_wing.animate({
+        transform: 'r120,340,400.5',
+    }, 200, mina.linear);
+    r_wing.animate({
+        transform: 'r-120,640,400.5',
+    }, 200, mina.linear);
+}

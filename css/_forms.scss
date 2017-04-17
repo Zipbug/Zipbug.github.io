@@ -1,0 +1,163 @@
+#contact-form{
+    background-color:rgba(19, 21, 25, 0.8);    
+    border-radius: 3px;
+    color:#fff;
+    margin: auto;
+    position: relative;
+    width:300px;
+    box-shadow: 1px 1px 15px 5px rgba(255,255,255,0.1), -1px -1px 15px 5px rgba(255,255,255,0.1);
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    h2{
+        text-align: center;
+        sub{
+            font-size: 12px;
+        }
+    }
+    .contact-avatar{
+        border:3px solid #fff;
+        width:60px;
+        height:60px;
+        background-color:#40B5E5;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top:-40px;
+        left:50%;
+        margin-left: -30px;
+        img{
+            width: 100%;   
+        }
+    }
+    .input_area{
+        position: relative;
+        max-height: 200px;
+        overflow: hidden;
+        transition: all 300ms ease;
+    }
+    label{
+        position:absolute;
+        top:45px;
+        left:20px;
+        transition: all 0.3s ease;
+        pointer-events: none;
+        user-select:none;
+        &.filled{
+            opacity: 0.5;
+            left:5px;
+            top:8px;
+        }
+    }
+    input, textarea{
+        color:#fff;
+        background-color:transparent;
+        -webkit-box-shadow: inset 0px 2px 42px 4px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 2px 42px 4px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 2px 42px 4px rgba(0,0,0,0.75);
+        border:none;
+        padding:20px;
+        margin-top: 30px;
+        width:100%;
+        &:focus {
+            outline:none;
+            &+ label{
+                opacity: 0.5;
+                left:5px;
+                top:8px;
+            }
+        }
+    }
+    textarea{
+        height: 150px;
+    }
+    .warning{
+        color:#d71212;
+        -webkit-text-fill-color: #d71212;
+    }
+    .loader{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        animation: none;        
+        margin:-40px 0 0 -40px;
+        z-index: -1;
+         pointer-events: none;
+        user-select:none;
+        &:before, &:after{
+            animation: none;        
+        }
+    }
+    .success-icon{
+        opacity: 0;
+        width:40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity 300ms ease;
+        transition-delay: 300ms;
+         pointer-events: none;
+        user-select:none;
+    }
+    .submit{
+        border:0;
+        background-color:#40B5E5;
+        color:rgb(19, 21, 25);
+        font-size:1.5em;
+        padding:10px 0;
+        cursor: pointer;
+        box-shadow: none;
+        transition: opacity 300ms ease;
+    }
+    &.collapsed{
+        color:transparent;
+        .input_area{
+            max-height: 0px !important;
+        }
+        .submit{
+            opacity: 0;
+        }
+        .loader{
+            opacity: 1;
+             animation: spin 2s linear infinite;
+            z-index: 1;
+            &:before{
+                animation: spin 3s linear infinite;
+            }
+            &:after{
+                animation: spin 1.5s linear infinite;
+            }
+        }
+    }
+    &.submited{
+        .loader{
+            opacity: 0;
+        }        
+    }
+    &.success{
+        .success-icon{
+            opacity: 1;
+        }
+    }
+}
+$black: rgb(19, 21, 25);
+$white: #fff;
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: $white;
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes autofill {
+    to {
+        color: #666;
+        background: transparent;
+    }
+}
