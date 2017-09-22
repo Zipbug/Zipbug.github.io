@@ -160,6 +160,14 @@
     -webkit-transition: all 0.3s 1s ease-out;
     transition: all 0.3s 1s ease-out;
 }
+.scroll-body, .nav-toggle, nav{
+    visibility: hidden;
+}
+.loaded{
+    .scroll-body, .nav-toggle, nav{
+        visibility: visible;
+    }
+}
 
 
 /* JavaScript Turned Off */

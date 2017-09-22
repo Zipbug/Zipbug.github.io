@@ -3,15 +3,14 @@
     border-radius: 3px;
     color:#fff;
     margin: auto;
-    position: relative;
-    width:300px;
+    width:92%;
     box-shadow: 1px 1px 15px 5px rgba(255,255,255,0.1), -1px -1px 15px 5px rgba(255,255,255,0.1);
-    position: absolute;
-    top:45%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    position: relative;
+    top:50px;
+
     h2{
         text-align: center;
+        margin-bottom: 0;
         sub{
             font-size: 12px;
         }
@@ -24,7 +23,7 @@
         border-radius: 50%;
         overflow: hidden;
         position: absolute;
-        top:-40px;
+        top:-60px;
         left:50%;
         margin-left: -30px;
         img{
@@ -39,7 +38,7 @@
     }
     label{
         position:absolute;
-        top:45px;
+        top:36px;
         left:20px;
         transition: all 0.3s ease;
         pointer-events: none;
@@ -57,8 +56,8 @@
         -moz-box-shadow: inset 0px 2px 42px 4px rgba(0,0,0,0.75);
         box-shadow: inset 0px 2px 42px 4px rgba(0,0,0,0.75);
         border:none;
-        padding:20px;
-        margin-top: 30px;
+        padding:15px;
+        margin-top: 25px;
         width:100%;
         &:focus {
             outline:none;
@@ -70,7 +69,7 @@
         }
     }
     textarea{
-        height: 150px;
+        height: 46px;
     }
     .warning{
         color:#d71212;
