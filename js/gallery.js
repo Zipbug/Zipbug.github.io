@@ -147,7 +147,7 @@ function GetData(name){
 function openLightbox(data){
     var link = data[0].link ? '<a class="link-button" href="' + data[0].link + '" target="_blank" >View Site</button>' : "<p>Site no longer active</p>";
     var lightbox = '<div class="lightbox fade-in-fast"><div class="lightbox-content"><button class="close-lightbox">X</button>' +
-                        '<img src="'+ data[0].image +'" />' +
+                        '<img src="'+ data[0].image +'" alt="'+ data[0].name + '" />' +
                         '<div class="text-content">' +
                             '<h2>' + data[0].name + '</h2>' +
                             '<p>' + data[0].desription + '</p>'+
