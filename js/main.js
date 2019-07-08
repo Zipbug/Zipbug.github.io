@@ -47,7 +47,7 @@ function onNavToggle() {
 }
 
 function onKeyUp(eventObj){
-    var target = $(eventObj.currentTarget); 
+    var target = $(eventObj.currentTarget);
     var value = target.val();
     if(value){
         target.next('label').addClass('filled');
@@ -59,7 +59,7 @@ function onKeyUp(eventObj){
 function onContactSubmit() {
     var errors = 0;
     var submited = false;
-    $('.r_input').each(function () {        
+    $('.r_input').each(function () {
         if (!$(this).next('label').hasClass('filled')) {
             $(this).addClass('warning').next('label').addClass('warning');
             errors++;
@@ -80,7 +80,7 @@ function onContactSubmit() {
             data: $('#contact-form').serialize(),
             success: function () {
                 submited = true;
-                $('input, textarea').val("").removeClass('filled').next(label).removeClass('.filled');
+                $('input, textarea').val("").removeClass('filled').next('label').removeClass('.filled');
                 setTimeout(function(){
                     form.addClass('success submited');
                 }, 800);
@@ -95,7 +95,7 @@ function onContactSubmit() {
                 submited = true;
                 setTimeout(function(){
                     form.removeClass('collapsed');
-                    $('.response').text("Sorry but we were unable to proccess your submition. Please try again later");                           
+                    $('.response').text("Sorry but we were unable to proccess your submition. Please try again later");
                 }, 600);
             }
           });
@@ -116,7 +116,7 @@ function scrollToElement(ele, animate) {
     $('a.active').removeClass('active');
     $('a' + '[data-id="' + ele[0].id + '"]').addClass('active');
 
-    
+
     $('.scroll-body').addClass('scale-up').animate({
         scrollTop: $w_top,
         scrollLeft: $w_left,

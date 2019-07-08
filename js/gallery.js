@@ -1,5 +1,29 @@
 var galleryArray = [
     {
+        "name": "Tektonika",
+        "desription": "Part of the HP blog, I was able to build a custom quiz page for them with great animations and gifs.",
+        "image": "/images/portfolio/tektonikamag.jpg",
+        "link": "https://www.tektonikamag.com/index.php/daas-quiz/"
+    },
+    {
+        "name": "Northrop",
+        "desription": "The blog side of Northrop, I built them a custom wordpress post type and template to create animated pages.",
+        "image": "/images/portfolio/northrop.jpg",
+        "link": "https://now.northropgrumman.com/landing/environmental-tech/"
+    },
+    {
+        "name": "Kindigit",
+        "desription": "For the popular TV show, I built them a custom landing page with animations.",
+        "image": "/images/portfolio/kindigit.jpg",
+        "link": "https://www.kindigit.com/kindigit-process/"
+    },
+    {
+        "name": "PublicNTP",
+        "desription": "I was given the privilage to work on this open source project, both the app and the websites.",
+        "image": "/images/portfolio/pntp.jpg",
+        "link": "https://publicntp.org/"
+    },
+    {
         "name": "AllenComm",
         "desription": "This was a joint rebuild of the Allen Communications site. I worked alongside Jibe Media to rebuild the site. We were able to reduce the page load from 10 seconds to just over one second. We were also able to improve the mobile experience which made the jump rates drop significantly.",
         "image": "/images/portfolio/allencomm.jpg",
@@ -14,14 +38,12 @@ var galleryArray = [
     {
         "name": "Hive Connected",
         "desription": "I was contacted to optimize the site for faster load times. I was able to decrease the load time of each page from over 6 seconds to less than 2 across the board. New /images have been uploaded and many changes have been made, current load times may be different from those stated.",
-        "image": "/images/portfolio/hive.jpg",
-        "link": "http://hiveconnected.com/home/"
+        "image": "/images/portfolio/hive.jpg"
     },
     {
         "name": "Veteran Mothers Association",
         "desription": "This was a custom WordPress build for the Utah veteran mothers, they were a pleasure to work with and it was a great project.",
-        "image": "/images/portfolio/vaMoms_A.jpg",
-        "link": "http://www.veteranmothers.org/"
+        "image": "/images/portfolio/vaMoms_A.jpg"
     },
     {
         "name": "Aetna Get Feds Mail Campaign",
@@ -89,8 +111,8 @@ function buildGallery(item, index) {
             }, 300);
     }).click(function(){
          var name = $(this).find('.title').text();
-         var data = GetData(name); 
-        
+         var data = GetData(name);
+
          openLightbox(data);
      });
 }
@@ -103,7 +125,7 @@ function renderGalleryItem(item, index){
                         '<image x="-80" y="0" width="630" height="430" xlink:href="' + item.image + '" clip-path="url(#hex)" alt="' + item.name + '"></image>' +
                         '<polygon class="overlay" points="174.07 0 348.14 100.5 348.14 301.5 174.07 402 0 301.5 0 100.5 174.07 0" />' +
                     '</svg>';
-    
+
     var hex = '<div class="gallery-hex">' +
                     svgFile +
                     ' <div class="hover-hide">' +
@@ -122,8 +144,8 @@ function GetData(name){
     );
 }
 
-function openLightbox(data){ 
-    var link = data[0].link ? '<a class="link-button" href="' + data[0].link + '" target="_blank" >View Site</button>' : "<p>Link unavailable</p>";
+function openLightbox(data){
+    var link = data[0].link ? '<a class="link-button" href="' + data[0].link + '" target="_blank" >View Site</button>' : "<p>Site no longer active</p>";
     var lightbox = '<div class="lightbox fade-in-fast"><div class="lightbox-content"><button class="close-lightbox">X</button>' +
                         '<img src="'+ data[0].image +'" />' +
                         '<div class="text-content">' +
@@ -132,8 +154,8 @@ function openLightbox(data){
                             link +
                         '</div>' +
                     '</div></div>';
-    
-  $('#gallery').append(lightbox);  
+
+  $('#gallery').append(lightbox);
   $('.close-lightbox').click(function(){
         var lightbox = $('#gallery').find('.lightbox');
         lightbox.remove();
@@ -141,4 +163,3 @@ function openLightbox(data){
 }
 
 buildGallery();
-

@@ -1,5 +1,5 @@
 #contact-form{
-    background-color:rgba(19, 21, 25, 0.8);    
+    background-color:rgba(19, 21, 25, 0.8);
     border-radius: 3px;
     color:#fff;
     margin: auto;
@@ -27,7 +27,7 @@
         left:50%;
         margin-left: -30px;
         img{
-            width: 100%;   
+            width: 100%;
         }
     }
     .input_area{
@@ -81,13 +81,13 @@
         left: 50%;
         width: 80px;
         height: 80px;
-        animation: none;        
+        animation: none;
         margin:-40px 0 0 -40px;
         z-index: -1;
          pointer-events: none;
         user-select:none;
         &:before, &:after{
-            animation: none;        
+            animation: none;
         }
     }
     .success-icon{
@@ -136,13 +136,14 @@
     &.submited{
         .loader{
             opacity: 0;
-        }        
+        }
     }
     &.success{
         .success-icon{
             opacity: 1;
         }
     }
+    
 }
 $black: rgb(19, 21, 25);
 $white: #fff;

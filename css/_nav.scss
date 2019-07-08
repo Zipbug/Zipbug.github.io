@@ -58,12 +58,34 @@ nav {
             svg {
                 fill: #131519;
             }
-            .thin-line, .thick-line{                
-                stroke: rgba(255, 255, 255, 0.8);                
+            .thin-line, .thick-line{
+                stroke: rgba(255, 255, 255, 0.8);
             }
         }
     }
-    
+    .social{
+      text-align: center;
+      border-top: 1px solid #393D40;
+      position: absolute;
+      bottom:0;
+      width:100%;
+      min-width:85px;
+      a{
+        display: inline-block;
+        width:20px;
+        height:30px;
+        margin:5px;
+        border:0;
+        &:hover svg{
+          fill:#40B5E5;
+        }
+        svg{
+          width:100%;
+          height:100%;
+          fill:#fff;
+        }
+      }
+    }
 }
 .toggle-nav {
     background-color: transparent;
@@ -74,7 +96,7 @@ nav {
     position: absolute;
     top:15px;
     left:12px;
-    
+
     -webkit-transform: rotate(0deg);
        -moz-transform: rotate(0deg);
          -o-transform: rotate(0deg);
@@ -84,7 +106,7 @@ nav {
        -moz-transition: .5s ease-in-out;
          -o-transition: .5s ease-in-out;
             transition: .5s ease-in-out;
-    
+
     z-index: 9999;
     &:focus{
         outline:none;
@@ -98,17 +120,17 @@ nav {
         opacity: 1;
         position: absolute;
         width: 100%;
-        
+
         -webkit-transform: rotate(0deg);
            -moz-transform: rotate(0deg);
              -o-transform: rotate(0deg);
                 transform: rotate(0deg);
-        
+
         -webkit-transition: .25s ease-in-out;
            -moz-transition: .25s ease-in-out;
              -o-transition: .25s ease-in-out;
                 transition: .25s ease-in-out;
-        
+
         &:nth-child(1) {
             top: 0px;
         }
@@ -120,7 +142,7 @@ nav {
             top: 16px;
         }
     }
-   
+
     &.open {
         span {
             background-color: rgb(64, 181, 229);
@@ -148,4 +170,5 @@ nav {
             }
         }
     }
+
 }
