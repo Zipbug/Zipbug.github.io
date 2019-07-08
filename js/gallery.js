@@ -2,7 +2,7 @@ var galleryArray = [
     {
         "name": "Tektonika",
         "desription": "Part of the HP blog, I was able to build a custom quiz page for them with great animations and gifs.",
-        "image": "/images/portfolio/tektonikamag.jpg",
+        "image": "/images/portfolio/tektonica.jpg",
         "link": "https://www.tektonikamag.com/index.php/daas-quiz/"
     },
     {
