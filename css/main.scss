@@ -138,7 +138,6 @@ body.loaded{
       }
       @for $i from 1 through 17{
       .gallery-hex:nth-child(#{$i}){
-        z-index: 17 - $i;
         animation-delay:  600 + random($i * 100) + ms;
       }
     }
