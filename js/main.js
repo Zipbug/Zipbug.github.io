@@ -20,11 +20,12 @@ $(document).ready(function () {
 */
 
 function onNavClick(eventObj) {
-    eventObj.preventDefault();
+    var t_id = $(eventObj.currentTarget).data('id');
     var animating = $('.scroll-body').is(':animated')
-    if(!animating){
-        var t_id = $(eventObj.currentTarget).data('id'),
-            target = $("#" + t_id);
+
+    if(!animating && t_id){
+      eventObj.preventDefault();
+      var target = $("#" + t_id);
         $('.scroll-body').stop();
 
         scrollToElement(target, true);

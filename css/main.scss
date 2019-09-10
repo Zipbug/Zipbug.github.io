@@ -130,5 +130,23 @@ section {
         color:#8F9395;
     }
 }
-
+body.loaded{
+  #gallery.active{
+    .gallery-hex{
+        animation-name: slideUp;
+        animation-duration: 600ms;
+      }
+      @for $i from 1 through 17{
+      .gallery-hex:nth-child(#{$i}){
+        z-index: 17 - $i;
+        animation-delay:  600 + random($i * 100) + ms;
+      }
+    }
+  }
+}
+/* Standard syntax */
+@keyframes slideUp {
+  from {right: -9999px;}
+  to {right: 0px;}
+}
 @import 'grid';

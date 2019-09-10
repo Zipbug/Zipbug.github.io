@@ -13,6 +13,8 @@ text, textpath{
 
 #gallery {
     position: relative;
+
+
     h2 {
         color: #dbdbdb;
         text-align: center;
@@ -37,19 +39,23 @@ text, textpath{
         float:left;
         position:relative;
         cursor: pointer;
+        right: -99999px;
+        animation-fill-mode: forwards;
         svg{
             height:100%;
             width:100%;
-            
+
         }
-        
+
         image{
             height: 100%;
             width:180%;
             opacity: 0.6;
         }
         .overlay{
-            fill:rgba(0,0,0,0.6);
+          fill:rgba(0,0,0,1);
+          stroke: rgb(143, 147, 149);
+          stroke-width: 2px;
         }
         .hover-hide{
             color: #fff;
@@ -63,7 +69,7 @@ text, textpath{
                 text-align: center;
             }
         }
-        
+
     }
     .lightbox{
         background-color: rgba(0,0,0,0.8);
@@ -72,7 +78,7 @@ text, textpath{
         left: 0;
         height: 100%;
         width: 100%;
-        z-index: 10;
+        z-index: 20;
         .lightbox-content{
             width:80%;
             padding:40px;
@@ -93,7 +99,7 @@ text, textpath{
         }
         .text-content{
             margin-left:20px;
-            
+
         }
         h2{
             color:#000;
@@ -128,7 +134,7 @@ text, textpath{
                 border-color:$z-blue;
                 color:$z-blue;
             }
-            
+
         }
     }
 }

@@ -272,7 +272,9 @@ text, textpath {
   #gallery .gallery-hex {
     float: left;
     position: relative;
-    cursor: pointer; }
+    cursor: pointer;
+    right: -99999px;
+    animation-fill-mode: forwards; }
     #gallery .gallery-hex svg {
       height: 100%;
       width: 100%; }
@@ -281,7 +283,9 @@ text, textpath {
       width: 180%;
       opacity: 0.6; }
     #gallery .gallery-hex .overlay {
-      fill: rgba(0, 0, 0, 0.6); }
+      fill: black;
+      stroke: #8f9395;
+      stroke-width: 2px; }
     #gallery .gallery-hex .hover-hide {
       color: #fff;
       position: absolute;
@@ -299,7 +303,7 @@ text, textpath {
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 10; }
+    z-index: 20; }
     #gallery .lightbox .lightbox-content {
       width: 80%;
       padding: 40px;
@@ -533,7 +537,7 @@ nav {
     nav a:first-child {
       margin-top: 30px; }
     nav a svg {
-      display: inline-block;
+      display: block;
       margin: 0 auto;
       width: 24px;
       height: 24px;
@@ -836,6 +840,67 @@ section {
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), -3px 3px 5px rgba(0, 0, 0, 0.7), 3px -3px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(0, 0, 0, 0.7);
     color: #8F9395; }
 
+body.loaded #gallery.active .gallery-hex {
+  animation-name: slideUp;
+  animation-duration: 600ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(1) {
+  z-index: 16;
+  animation-delay: 668ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(2) {
+  z-index: 15;
+  animation-delay: 630ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(3) {
+  z-index: 14;
+  animation-delay: 677ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(4) {
+  z-index: 13;
+  animation-delay: 860ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(5) {
+  z-index: 12;
+  animation-delay: 798ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(6) {
+  z-index: 11;
+  animation-delay: 1145ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(7) {
+  z-index: 10;
+  animation-delay: 877ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(8) {
+  z-index: 9;
+  animation-delay: 943ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(9) {
+  z-index: 8;
+  animation-delay: 1437ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(10) {
+  z-index: 7;
+  animation-delay: 1504ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(11) {
+  z-index: 6;
+  animation-delay: 1690ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(12) {
+  z-index: 5;
+  animation-delay: 953ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(13) {
+  z-index: 4;
+  animation-delay: 1627ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(14) {
+  z-index: 3;
+  animation-delay: 1281ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(15) {
+  z-index: 2;
+  animation-delay: 835ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(16) {
+  z-index: 1;
+  animation-delay: 1875ms; }
+body.loaded #gallery.active .gallery-hex:nth-child(17) {
+  z-index: 0;
+  animation-delay: 649ms; }
+
+/* Standard syntax */
+@keyframes slideUp {
+  from {
+    right: -9999px; }
+  to {
+    right: 0px; } }
 /*-------------Grid-------------*/
 .container {
   width: 100%;

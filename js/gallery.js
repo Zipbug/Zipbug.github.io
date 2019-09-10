@@ -101,12 +101,12 @@ var galleryArray = [
 function buildGallery(item, index) {
    galleryArray.map(renderGalleryItem.bind(this));
      $('.gallery-hex').hover(function () {
-            $(this).find('.overlay').animate({
+            $(this).find('.overlay, .title').animate({
                 opacity: 0
             }, 300);
         },
         function () {
-            $(this).find('.overlay').animate({
+            $(this).find('.overlay, .title').animate({
                 opacity: 1
             }, 300);
     }).click(function(){
