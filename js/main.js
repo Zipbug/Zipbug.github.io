@@ -136,7 +136,7 @@ Snap.load('ZIP-BUG-WINGS.svg', function (bug) {
     $(document).ready(function () {
         setTimeout(function () {
             animateBug(bug);
-        }, 3600);
+        }, 300);
     });
 });
 

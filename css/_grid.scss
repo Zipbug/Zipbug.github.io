@@ -1,8 +1,8 @@
 /*-------------Grid-------------*/
 
 .container {
-    width: 100%;
-    max-width: 1416px;
+    width: calc(100% - 240px);
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -20,17 +20,8 @@
 }
 
 @media screen and (min-width: 200px) {
-    .container {
-        max-width: 250px;
-    }
-    .hexagon, .gallery-hex {
-        width: 250px;
-        height: 287.5px; // Width *1.15
-        margin: 10px 3px 10px 0px;
-        .description {
-            padding-top: 30px;
-        }
-    }
+
+
     .title {
         bottom: 20px;
         h1 {
@@ -45,7 +36,7 @@
 }
 .toggle-nav{
     display: block;
-    
+
 }
 nav{
     width:0px;
@@ -82,60 +73,14 @@ nav{
     }
 }
 
-@media screen and (min-width: 405px) {
-    .container {
-        max-width: 382px;
-    }
-    .gallery-hex {
-        margin-top: 0px;
-        margin-bottom: -69px;
-        &:nth-child(n) {
-            margin-left: 0px;
-        }
-        &:nth-child(even) {
-            margin-left: 127px;
-        }
-    }
-}
 
-@media screen and (min-width: 545px) {
-    .container {
-        max-width: 508px;
-    }
-    .gallery-hex {
-        &:nth-child(n) {
-            margin-left: 0px;
-        }
-        &:nth-child(3n) {
-            margin-left: 127px;
-        }
-    }
-    
-}
 
 @media screen and (min-width: 755px) {
-    .container {
-        max-width: 532px;
-    }
-    .gallery-hex {
-        width: 350px;
-        height: 404.5px; // Width *1.15
-        margin-bottom: -96px;
-        margin-right: 4px;
-        .description {
-            padding-top: 50px;
-        }
-        &:nth-child(n) {
-            margin-left: 0;
-        }
-        &:nth-child(even) {
-            margin-left: 176px;
-        }
-    }  
+
     #main .message{
         font-size: 5.5em;
     }
-    
+
 }
 
 @media screen and (min-width:768px) {
@@ -185,17 +130,7 @@ nav{
 }
 
 @media screen and (min-width: 805px) {
-    .container {
-        max-width: 711px;
-    }
-    .gallery-hex {
-        &:nth-child(n) {
-            margin-left: 0;
-        }
-        &:nth-child(3n) {
-            margin-left: 176px;
-        }
-    }
+
     .half {
         width: calc(50% - 80px);
         float: left;
@@ -203,22 +138,6 @@ nav{
     }
     .phoneShow {
         display: none;
-    }
-}
-
-@media screen and (min-width:905px) {
-    .container {
-        max-width: 885px;
-    }
-    .gallery-hex {
-        &:nth-child(n) {
-            margin-left: 0;
-        }
-        &:nth-child(3),
-        &:nth-child(7),
-        &:nth-child(11) {
-            margin-left: 176px;
-        }
     }
 }
 
@@ -232,34 +151,8 @@ nav{
 }
 
 @media screen and (min-width:1255px) {
-    .container {
-        max-width: 1238px;
-    }
-    .gallery-hex {
-        &:nth-child(n) {
-            margin-left: 0;
-        }
-        &:nth-child(4),
-        &:nth-child(10) {
-            margin-left: 176px;
-        }
-    }
+
     .title h1 {
         font-size: 6em;
-    }
-}
-
-@media screen and (min-width:1455px) {
-    .container {
-        max-width: 1416px;
-    }
-    .gallery-hex {
-        &:nth-child(n) {
-            margin-left: 0;
-        }
-        &:nth-child(5),
-        &:nth-child(12) {
-            margin-left: 176px;
-        }
     }
 }

@@ -1,0 +1,81 @@
+#contact{
+  position: relative;
+  left:-100%;
+  transition: left 300ms ease;
+  transition-delay: 600ms;
+  @media(max-width:1080px){
+    left:0;
+  }
+  &.active{
+    left:0;
+  }
+}
+.form{
+  background-color:rgba(17, 145, 185,0.8);
+  padding:20px;
+  width:100%;
+  @media(max-width:1080px){
+    margin-bottom: 30px;
+  }
+  input, textarea{
+    font-size: 18px;
+    padding:10px;
+    border-radius: 0px;
+    border:0;
+    margin:5px 0;
+    float: right;
+    width:80%;
+  }
+  label{
+    clear:both;
+    width: 100%;
+    display: block;
+    border:none;
+    &:after {
+        content: "";
+        padding: 1px;
+        clear: both;
+        display: table;
+    }
+  }
+  &-avatar{
+    width:150px;
+    height:150px;
+    margin:auto;
+
+    svg{
+      width:100%;
+      height: auto;
+      fill:#000;
+      stroke:#000;
+    }
+  }
+}
+.button{
+  display: inline-block;
+  clear: both;
+  margin:10px auto;
+  background-color:#000;
+  background-image: url('../images/backgrounds/dark_mosaic.png');
+  padding:15px 30px;
+  color:#fff;
+  border:transparent;
+  box-shadow: none;
+  &:hover, &:focus{
+    border:transparent;
+    box-shadow: none;
+  }
+}
+.social{
+  margin-top: 20px;
+  a{
+    width:20px;
+    display: inline-block;
+    margin-right:10px;
+    svg{
+      width:100%;
+      height: auto;
+      fill:#efefef;
+    }
+  }
+}

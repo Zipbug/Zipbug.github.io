@@ -1,0 +1,51 @@
+/*-------------Grid-------------*/
+
+.container {
+    width: calc(100% - 60px);
+    max-width: 1400px;
+    max-height: calc(100% - 20px);
+    overflow: auto;
+    margin-left: 60px;
+}
+
+.clearfix {
+    &:after {
+        content: "";
+        padding: 1px;
+        clear: both;
+        display: table;
+    }
+}
+
+.phoneShow {
+    display: block;
+    clear:both;
+    margin:10px 0;
+}
+
+
+.half {
+    width: 80%;
+    margin: auto;
+    @media(max-width: 1080px){      
+      max-width: 350px;
+    }
+}
+
+/* Landscape */
+
+
+@media screen and (min-width: 805px) {
+    .container{
+      width: calc(100% - 240px);
+      margin: auto;
+    }
+    .half {
+        width: 50%;
+        float: left;
+        padding:0 40px;
+    }
+    .phoneShow {
+        display: none;
+    }
+}

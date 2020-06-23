@@ -12,129 +12,55 @@ text, textpath{
 /* Gallery */
 
 #gallery {
+
     position: relative;
-
-
-    h2 {
-        color: #dbdbdb;
-        text-align: center;
-        font-size: 2.2em;
-        font-weight: 100;
+    .container{
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
-    .gallery-description {
-        text-align: center;
-        color: #ededed;
-        .button-link {
-            height: 40px;
-            width: 40px;
-            position: relative;
-            top: 15px;
-        }
-    }
-    span:nth-of-type(odd) {
-        width: 174px;
-        margin-right: 2px;
-    }
-    .gallery-hex{
-        float:left;
-        position:relative;
-        cursor: pointer;
-        right: -99999px;
-        animation-fill-mode: forwards;
-        svg{
-            height:100%;
-            width:100%;
-
-        }
-
-        image{
-            height: 100%;
-            width:180%;
-            opacity: 0.6;
-        }
-        .overlay{
-          fill:rgba(0,0,0,1);
-          stroke: rgb(143, 147, 149);
-          stroke-width: 2px;
-        }
-        .hover-hide{
-            color: #fff;
-            position: absolute;
-            top:50%;
-            left:50%;
-            width:90%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            .title{
-                text-align: center;
-            }
-        }
-
-    }
-    .lightbox{
-        background-color: rgba(0,0,0,0.8);
-        position:absolute;
-        top:0;
-        left: 0;
+    .card{
+      width:calc(50% - 20px);
+      min-width:200px;
+      margin:10px;
+      *{
+        box-sizing: border-box;
+      }
+      @media(max-width:768px){
+        width:100%;
+      }
+      .card-body{
+        position: relative;
+        overflow: hidden;
+      }
+      .card-description{
+        background-color: rgba(255,255,255,0.8);
+        position: absolute;
+        top:100%;
+        left:0;
+        width:100%;
         height: 100%;
-        width: 100%;
-        z-index: 20;
-        .lightbox-content{
-            width:80%;
-            padding:40px;
-            max-width:1200px;
-            background-color:#fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color:#000;
-            text-align: center;
+        opacity: 0;
+        padding:15px;
+        transition: all 300ms ease;
+      }
+      &:hover{
+        .card-description{
+          opacity: 1;
+          top:0;
         }
-        img, .text-content{
-            width:calc(50% - 10px);
-            min-width:250px;
-            display: inline-block;
-            vertical-align: top;
-        }
-        .text-content{
-            margin-left:20px;
-
-        }
-        h2{
-            color:#000;
-        }
-        p{
-            text-align: left;
-        }
-        .close-lightbox{
-            position: absolute;
-            top: 5px;
-            right:5px;
-            background: #000;
-            border: 0;
-            color:#fff;
-            font-size:1.8em;
-            width:50px;
-            height:50px;
-            opacity: 0.4;
-            cursor: pointer;
-            &:focus{
-                outline: none;
-            }
-        }
-        .link-button{
-            border:2px solid #000;
-            padding:10px 15px;
-            color:#000;
-            text-decoration:none;
-            transition:color 300ms, border 300ms ease-in-out;
-            margin-top:30px;
-            &:hover, &:focus{
-                border-color:$z-blue;
-                color:$z-blue;
-            }
-
-        }
+      }
+      img{
+        max-width: 100%;
+      }
+      a{
+        color:#000;
+        text-decoration: none;
+      }
+      .card-header{
+        color:#fff;
+      }
     }
+
 }

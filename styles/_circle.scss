@@ -1,0 +1,94 @@
+.circle {
+  position: fixed;
+  top:5%;
+  right: 10%;
+  height: 200px;
+  width: 200px;
+  z-index: 11;
+  opacity: 0;
+  transition: opacity 300ms,right 600ms, top 600ms, transform 600ms,  opacity 600ms ease;
+
+  svg {
+    width:100%;
+    transform: rotate(-90deg);
+    transition: transform 300ms ease;
+  }
+
+  &.active {
+    opacity: 1;
+    transition-delay: 300ms;
+  }
+
+  &.inactive {
+    opacity: 0.2;
+    top:-5%;
+    right:5%;
+    transform:scale(0.5);
+    svg {
+      transform: rotate(0deg);
+    }
+  }
+
+  div,
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  @media(max-width:1024px) {
+    display:none;
+  }
+}
+
+.path {
+  fill: none;
+  stroke: $z-blue;
+  stroke-width: 2px;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1620.5;
+  stroke-dashoffset: 1620.5;
+}
+
+.path-bg {
+  fill: none;
+  stroke: $gray;
+  stroke-miterlimit: 10;
+}
+
+.path-point {
+  .path-inner{
+    fill: $gray;
+  }
+  .path-pulse{
+    fill: none;
+    stroke:$gray;
+    stroke-width:1px;
+  }
+  .path-stroke{
+    fill: none;
+  }
+  &.active {
+    .path-inner{
+      fill: $z-blue;
+    }
+    .path-stroke{
+      stroke:$gray;
+      stroke-width:10px;
+    }
+  }
+}
+
+#active-icon{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:100px;
+  height: 100px;
+  transform:translate(-50%, -50%) rotate(90deg);
+  font-family: Oswald;
+  font-weight: bold;
+  svg{
+    fill:rgba(17, 145, 185,0.8);
+    width:100%;
+    height: auto;
+  }
+}

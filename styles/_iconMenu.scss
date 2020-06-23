@@ -1,0 +1,48 @@
+.icon_menu{
+  border-top:2px solid red;
+  width:85px;
+  height:60px;
+  overflow: hidden;
+  position: fixed;
+  top:60%;
+  left: 15%;
+  opacity: 0;
+  transition: opacity 300ms,  top 600ms ease;
+  &.active{
+    opacity: 1;
+    transition-delay: 300ms;
+  }
+  img{
+    width:100%;
+    transition: width 300ms, opacity 300ms ease;
+
+  }
+  .icon{
+    width:85px;
+    height:80px;
+    display: block;
+    padding:10px 0;
+    &.inactive img{
+      width:80%;
+      opacity: 0.3;
+    }
+  }
+
+  @media(max-width:1024px) {
+    display:none;
+  }
+
+}
+.mobile-icon{
+  width:85px;
+  position: absolute;
+  bottom:40px;
+  left:25%;
+  display:none;
+  z-index: 5;
+  border-top:2px solid red;
+  padding-top:5px;
+  @media(max-width:896px) {
+    display:block;
+  }
+}
