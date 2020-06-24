@@ -495,10 +495,21 @@ body {
         margin-bottom: 30px; } }
   #resume h3 {
     text-align: center;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px; }
   #resume h5 {
     font-size: 1.2em;
-    margin-bottom: 10px; }
+    margin-top: 20px;
+    margin-bottom: 0px; }
+    #resume h5 .thin {
+      font-family: 'Roboto';
+      font-size: 0.9em; }
+  #resume h6 {
+    font-family: OswaldLight;
+    font-weight: 100;
+    margin: 0 0 10px;
+    font-size: 1em; }
   #resume h4 {
     margin: 10px 0; }
   #resume .experience {
