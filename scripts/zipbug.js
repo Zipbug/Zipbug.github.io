@@ -207,6 +207,28 @@ var mobile = false;
     var bug = Snap('#zipbug');
     animateBug(bug, false);
   }, 900);
+$('#zipbug').click(function(){
+  var bug = Snap('#zipbug');
+  var l_wing = bug.select('.wing.left'),
+    r_wing = bug.select('.wing.right');
+    
+  $(this).toggleClass('open');
+  if ($(this).hasClass('open')) {
+    l_wing.animate({
+      transform: 'r0,0,0',
+    }, 200, mina.linear);
+    r_wing.animate({
+      transform: 'r0,0,0',
+    }, 200, mina.linear);
+  } else {
+    l_wing.animate({
+      transform: 'r120,340,400.5',
+    }, 200, mina.linear);
+    r_wing.animate({
+      transform: 'r-120,640,400.5',
+    }, 200, mina.linear);
+  }
+})
 
 })(jQuery);
 
@@ -229,3 +251,49 @@ function animateBug(bug, close) {
     }, 200, mina.linear);
   }
 }
+
+window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+
+    var form = document.getElementById("my-form");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.innerHTML = "Thanks! I'll be in touch soon.";
+    }
+
+    function error() {
+      status.innerHTML = "Oops! There was a problem. Try again later.";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }

@@ -915,7 +915,7 @@
               <line class="thick-line" x1="609" y1="664.7" x2="793" y2="664.7" />
             </svg>
           </div>
-          <form action="https://formspree.io/xyynpqdz" method="POST">
+          <form action="https://formspree.io/xyynpqdz" method="POST" id="my-form">
             <label>
               Name:
               <input type="text" name="_name" required>
@@ -928,10 +928,10 @@
               Message:
               <textarea name="message" required></textarea>
             </label>
-
-            <!-- your other form fields go here -->
+            <p id="my-form-status"></p>
+            
             <br>
-            <button class="button" type="submit">Send</button>
+            <button  id="my-form-button" class="button" type="submit">Send</button>
           </form>
         </div>
       </section>
